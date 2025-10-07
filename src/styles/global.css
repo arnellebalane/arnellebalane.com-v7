@@ -1,1 +1,11 @@
 @import 'tailwindcss';
+
+@theme {
+    --font-sans: 'Outfit', sans-serif;
+    --color-primary: #8b392d;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    background-color: var(--color-slate-100);
+}
