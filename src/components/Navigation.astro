@@ -1,12 +1,24 @@
 ---
 import MenuIcon from '../images/menu.svg';
+
+const links = [
+    { text: 'About', href: '/about' },
+    { text: 'Writing', href: '/writing' },
+    { text: 'Projects', href: '/projects' },
+    { text: 'Events', href: '/events' },
+];
+
+const getCurrentClass = (href: string) => (Astro.url.pathname.startsWith(href) ? 'text-primary' : undefined);
 ---
 
 <nav class="hidden sm:flex items-center gap-2">
-    <a href="/about" class="px-2 py-1 rounded-sm">About</a>
-    <a href="/about" class="px-2 py-1 rounded-sm">Writing</a>
-    <a href="/about" class="px-2 py-1 rounded-sm">Projects</a>
-    <a href="/about" class="px-2 py-1 rounded-sm">Events</a>
+    {
+        links.map(({ text, href }) => (
+            <a href={href} class:list={['px-2 py-1 rounded-sm', getCurrentClass(href)]}>
+                {text}
+            </a>
+        ))
+    }
 </nav>
 
 <button class="block sm:hidden">
