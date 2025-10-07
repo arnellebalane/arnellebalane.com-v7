@@ -6,6 +6,8 @@
 }
 
 body {
+    font-size: var(--text-lg);
+    letter-spacing: var(--tracking-tight);
     -webkit-font-smoothing: antialiased;
     background-color: var(--color-slate-100);
 }

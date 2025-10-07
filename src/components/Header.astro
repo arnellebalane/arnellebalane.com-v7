@@ -1,14 +1,17 @@
 ---
 import { Image } from 'astro:assets';
 import avatarImage from '../images/avatar-sm.jpg';
+import Navigation from './Navigation.astro';
 ---
 
 <header class="p-5">
-    <div class="mx-auto flex justify-between">
-        <a href="/" class="flex items-center gap-3 p-1">
+    <div class="mx-auto flex justify-between gap-5">
+        <a href="/" class="flex items-center gap-3 p-1 -ml-1 rounded-sm">
             <Image src={avatarImage} class="object-cover object-center rounded-full" alt="Arnelle Balane" />
-            <span class="text-xl font-bold leading-none tracking-tight text-primary">Arnelle Balane</span>
+            <span class="text-xl font-bold leading-none text-primary">Arnelle Balane</span>
         </a>
+
+        <Navigation />
     </div>
 </header>
 
