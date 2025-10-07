@@ -1,1 +1,15 @@
 @import 'tailwindcss';
+
+@theme {
+    --font-sans: 'Outfit', sans-serif;
+    --color-primary: #8b392d;
+    --color-copy: #27272a;
+}
+
+body {
+    font-size: var(--text-lg);
+    letter-spacing: var(--tracking-tight);
+    -webkit-font-smoothing: antialiased;
+    color: var(--color-copy);
+    background-color: var(--color-slate-100);
+}
