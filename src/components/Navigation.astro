@@ -1,6 +1,14 @@
-<nav class="flex items-center gap-2 -mr-2">
-    <a href="/about" class="px-2 py-1 rounded-sm text-primary">About</a>
+---
+import MenuIcon from '../images/menu.svg';
+---
+
+<nav class="hidden sm:flex items-center gap-2">
+    <a href="/about" class="px-2 py-1 rounded-sm">About</a>
     <a href="/about" class="px-2 py-1 rounded-sm">Writing</a>
     <a href="/about" class="px-2 py-1 rounded-sm">Projects</a>
     <a href="/about" class="px-2 py-1 rounded-sm">Events</a>
 </nav>
+
+<button class="block sm:hidden">
+    <MenuIcon class="size-8 p-1" />
+</button>

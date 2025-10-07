@@ -4,14 +4,16 @@ import avatarImage from '../images/avatar-sm.jpg';
 import Navigation from './Navigation.astro';
 ---
 
-<header class="p-5">
-    <div class="mx-auto flex justify-between gap-5">
-        <a href="/" class="flex items-center gap-3 p-1 -ml-1 rounded-sm">
-            <Image src={avatarImage} class="object-cover object-center rounded-full" alt="Arnelle Balane" />
-            <span class="text-xl font-bold leading-none text-primary">Arnelle Balane</span>
+<header class="px-4 py-2 sm:p-5">
+    <div class="mx-auto flex justify-between items-center gap-5">
+        <a href="/" class="flex items-center gap-2 sm:gap-3 p-1 -ml-1 sm:ml-0 rounded-sm">
+            <Image src={avatarImage} alt="Arnelle Balane" class="object-cover object-center rounded-full" />
+            <span class="text-lg sm:text-xl font-bold leading-none text-primary">Arnelle Balane</span>
         </a>
 
-        <Navigation />
+        <div class="-mr-2 sm:mr-0 sm:mt-0.5">
+            <Navigation />
+        </div>
     </div>
 </header>
 
@@ -21,7 +23,14 @@ import Navigation from './Navigation.astro';
     }
 
     img {
-        width: 36px;
-        height: 52px;
+        width: 22px;
+        height: 30px;
+    }
+
+    @media (min-width: 40rem) {
+        img {
+            width: 36px;
+            height: 52px;
+        }
     }
 </style>
