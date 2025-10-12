@@ -5,3 +5,7 @@
     --color-primary: #8b392d;
     --color-copy: #27272a;
 }
+
+html {
+    --wrapper-width: 1472px;
+}
