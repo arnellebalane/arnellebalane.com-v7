@@ -24,8 +24,11 @@ const formattedTitle = `${prefix}Arnelle Balane`;
         <meta name="generator" content={Astro.generator} />
     </head>
 
-    <body>
+    <body class="text-lg text-copy tracking-tight antialiased bg-slate-100">
         <Header />
-        <slot />
+
+        <div class="px-5">
+            <slot />
+        </div>
     </body>
 </html>

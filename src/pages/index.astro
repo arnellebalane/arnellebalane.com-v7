@@ -1,5 +1,37 @@
 ---
+import { Image } from 'astro:assets';
 import BaseLayout from '../layouts/BaseLayout.astro';
+import avatarImage from '../images/avatar-lg.png';
 ---
 
-<BaseLayout />
+<BaseLayout>
+    <div class="flex flex-col justify-center gap-13 min-h-(--content-height) pt-20 pb-50">
+        <div class="flex flex-col gap-8">
+            <Image
+                src={avatarImage}
+                alt="Arnelle Balane"
+                class="w-[120px] h-[170px] object-cover object-center rounded-full mx-auto"
+            />
+
+            <div class="text-center">
+                <h1 class="mb-5 font-semibold text-3xl leading-none">
+                    Hi, I'm <span class="text-primary">Arnelle</span>.
+                </h1>
+                <p class="text-xl">
+                    I'm a software engineer based in Seattle crafting high-quality and human-friendly applications for
+                    over 10 years.
+                </p>
+            </div>
+        </div>
+
+        <nav class="flex justify-center">
+            <a href="/about" class="px-2 py-1 rounded-sm text-primary"> About Me &rightarrow;</a>
+        </nav>
+    </div>
+</BaseLayout>
+
+<style>
+    div {
+        --content-height: calc(100vh - 56px);
+    }
+</style>
