@@ -21,11 +21,15 @@ const formattedTitle = `${prefix}Arnelle Balane`;
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="description" content="Arnelle is a software engineer based in Seattle." />
         <meta name="generator" content={Astro.generator} />
     </head>
 
-    <body>
+    <body class="text-lg text-copy tracking-tight antialiased bg-slate-100">
         <Header />
-        <slot />
+
+        <div class="px-5">
+            <slot />
+        </div>
     </body>
 </html>

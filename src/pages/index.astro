@@ -1,5 +1,56 @@
 ---
+import { Image } from 'astro:assets';
 import BaseLayout from '../layouts/BaseLayout.astro';
+import avatarImage from '../images/avatar-lg.png';
 ---
 
-<BaseLayout />
+<BaseLayout>
+    <div
+        class="app-container flex flex-col justify-center gap-13 min-h-(--content-height) pt-20 pb-50 mx-auto sm:max-w-[850px]"
+    >
+        <div class="flex flex-col gap-8 sm:flex-row sm:items-center sm:gap-13">
+            <Image
+                src={avatarImage}
+                alt="Arnelle Balane"
+                class="object-cover object-center rounded-full mx-auto w-[120px] h-[170px] sm:w-[200px] sm:h-[284px]"
+            />
+
+            <div class="app-details text-center sm:text-left">
+                <h1 class="mb-5 font-semibold text-3xl leading-none sm:text-5xl">
+                    Hi, I'm <span class="text-primary">Arnelle</span>.
+                </h1>
+                <p class="text-xl sm:text-3xl sm:leading-none">
+                    I'm a software engineer based in Seattle crafting high-quality and human-friendly applications for
+                    over 10 years.
+                </p>
+            </div>
+        </div>
+
+        <nav class="flex justify-center sm:justify-start sm:pl-[244px]">
+            <a href="/about" class="px-2 py-1 rounded-sm text-primary sm:hidden">About Me &rightarrow;</a>
+
+            <div class="hidden sm:flex gap-2">
+                <a href="/about" class="px-2 py-1 rounded-sm text-xl">About</a>
+                <a href="/writing" class="px-2 py-1 rounded-sm text-xl">Writing</a>
+                <a href="/projects" class="px-2 py-1 rounded-sm text-xl">Projects</a>
+                <a href="/events" class="px-2 py-1 rounded-sm text-xl">Events</a>
+            </div>
+        </nav>
+    </div>
+</BaseLayout>
+
+<style>
+    .app-container {
+        --content-height: calc(100vh - 56px);
+    }
+
+    @media (min-width: 40rem) {
+        .app-container {
+            --content-height: 100vh;
+        }
+
+        .app-details {
+            letter-spacing: -0.12rem;
+        }
+    }
+</style>

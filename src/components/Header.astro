@@ -3,15 +3,19 @@ import { Image } from 'astro:assets';
 import avatarImage from '../images/avatar-sm.jpg';
 import Navigation from './Navigation.astro';
 
-const showHomeLink = Astro.url.pathname !== '/';
+const isHomeRoute = Astro.url.pathname === '/';
 ---
 
-<header class="px-4 py-2 sm:p-5">
-    <div class="mx-auto flex justify-between items-center gap-5">
+<header class:list={['px-4 py-2 sm:p-5', { 'sm:hidden': isHomeRoute }]}>
+    <div class="mx-auto flex justify-between items-center gap-5 max-w-(--wrapper-width)">
         {
-            showHomeLink && (
+            !isHomeRoute && (
                 <a href="/" class="flex items-center gap-2 sm:gap-3 p-1 -ml-1 sm:ml-0 rounded-sm">
-                    <Image src={avatarImage} alt="Arnelle Balane" class="object-cover object-center rounded-full" />
+                    <Image
+                        src={avatarImage}
+                        alt="Arnelle Balane"
+                        class="object-cover object-center rounded-full w-[22px] h-[32px] sm:w-[36px] sm:h-[52px]"
+                    />
                     <span class="text-lg sm:text-xl font-bold leading-none text-primary">Arnelle Balane</span>
                 </a>
             )
@@ -22,21 +26,3 @@ const showHomeLink = Astro.url.pathname !== '/';
         </div>
     </div>
 </header>
-
-<style>
-    div {
-        max-width: 1472px;
-    }
-
-    img {
-        width: 22px;
-        height: 32px;
-    }
-
-    @media (min-width: 40rem) {
-        img {
-            width: 36px;
-            height: 52px;
-        }
-    }
-</style>
