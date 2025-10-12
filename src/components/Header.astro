@@ -3,13 +3,13 @@ import { Image } from 'astro:assets';
 import avatarImage from '../images/avatar-sm.jpg';
 import Navigation from './Navigation.astro';
 
-const showHomeLink = Astro.url.pathname !== '/';
+const isHomeRoute = Astro.url.pathname === '/';
 ---
 
-<header class="px-4 py-2 sm:p-5">
+<header class:list={['px-4 py-2 sm:p-5', { 'sm:hidden': isHomeRoute }]}>
     <div class="mx-auto flex justify-between items-center gap-5 max-w-(--wrapper-width)">
         {
-            showHomeLink && (
+            !isHomeRoute && (
                 <a href="/" class="flex items-center gap-2 sm:gap-3 p-1 -ml-1 sm:ml-0 rounded-sm">
                     <Image
                         src={avatarImage}
