@@ -2,6 +2,13 @@
 import { Image } from 'astro:assets';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import avatarImage from '../images/avatar-lg.png';
+
+const links = [
+    { text: 'About', href: '/about' },
+    { text: 'Writing', href: '/writing' },
+    { text: 'Projects', href: '/projects' },
+    { text: 'Events', href: '/events' },
+];
 ---
 
 <BaseLayout>
@@ -26,14 +33,20 @@ import avatarImage from '../images/avatar-lg.png';
             </div>
         </div>
 
-        <nav class="flex justify-center sm:justify-start sm:pl-[244px]">
+        <nav class="flex justify-center sm:justify-start sm:pl-[246px]">
             <a href="/about" class="px-2 py-1 rounded-sm text-primary sm:hidden">About Me &rightarrow;</a>
 
             <div class="hidden sm:flex gap-2">
-                <a href="/about" class="px-2 py-1 rounded-sm text-xl">About</a>
-                <a href="/writing" class="px-2 py-1 rounded-sm text-xl">Writing</a>
-                <a href="/projects" class="px-2 py-1 rounded-sm text-xl">Projects</a>
-                <a href="/events" class="px-2 py-1 rounded-sm text-xl">Events</a>
+                {
+                    links.map(({ text, href }) => (
+                        <a
+                            href={href}
+                            class="px-2 py-1 rounded-sm outline-offset-2 text-xl hover:bg-slate-200 focus:bg-slate-200"
+                        >
+                            {text}
+                        </a>
+                    ))
+                }
             </div>
         </nav>
     </div>

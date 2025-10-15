@@ -14,7 +14,13 @@ const getCurrentClass = (href: string) => (Astro.url.pathname.startsWith(href) ?
 <nav class="hidden sm:flex items-center gap-2">
     {
         links.map(({ text, href }) => (
-            <a href={href} class:list={['px-2 py-1 rounded-sm', getCurrentClass(href)]}>
+            <a
+                href={href}
+                class:list={[
+                    'px-2 py-1 rounded-sm outline-offset-2 hover:bg-slate-200 focus:bg-slate-200',
+                    getCurrentClass(href),
+                ]}
+            >
                 {text}
             </a>
         ))
