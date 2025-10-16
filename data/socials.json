@@ -1,0 +1,32 @@
+[
+  {
+    "id": "github",
+    "name": "GitHub",
+    "link": "https://github.com/arnellebalane"
+  },
+  {
+    "id": "instagram",
+    "name": "Instagram",
+    "link": "https://instagram.com/arnellebalane"
+  },
+  {
+    "id": "linkedin",
+    "name": "LinkedIn",
+    "link": "https://linkedin.com/in/arnellebalane"
+  },
+  {
+    "id": "dev",
+    "name": "DEV.to",
+    "link": "https://dev.to/arnellebalane"
+  },
+  {
+    "id": "codepen",
+    "name": "CodePen",
+    "link": "https://codepen.io/arnellebalane"
+  },
+  {
+    "id": "unsplash",
+    "name": "Unsplash",
+    "link": "https://unsplash.com/@arnellebalane"
+  }
+]

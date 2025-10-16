@@ -1,0 +1,306 @@
+[
+  {
+    "title": "Frontend Web Development in 2021+",
+    "event_title": "Level Up with GDE (Web Technologies)",
+    "event_url": "https://www.facebook.com/186397268158879/videos/481357596650604",
+    "type": "talk",
+    "date": "2021-04-24",
+    "venue": "Online"
+  },
+  {
+    "title": "Securing user accounts with WebAuthn",
+    "event_title": "Chrome Dev Summit Extended Cebu",
+    "event_url": "https://gdg.community.dev/events/details/google-gdg-cebu-presents-chrome-dev-summit-extended-cebu/#/",
+    "type": "talk",
+    "date": "2021-02-27",
+    "venue": "Online"
+  },
+  {
+    "title": "Extending CSS using Houdini",
+    "event_title": "Chrome Dev Summit Extended Cebu",
+    "event_url": "https://gdg.community.dev/events/details/google-gdg-cebu-presents-chrome-dev-summit-extended-cebu/#/",
+    "type": "talk",
+    "date": "2021-02-27",
+    "venue": "Online"
+  },
+  {
+    "title": "Beyond the Basics: Firebase Cloud Firestore",
+    "event_title": "Workbean | Career Fiesta 2020",
+    "event_url": "https://advice.workbean.co/career-fiesta-2020/",
+    "type": "talk",
+    "date": "2020-12-04",
+    "venue": "Online"
+  },
+  {
+    "title": "Introduction to Web Development",
+    "event_title": "DSC Loyola - HackFest 2020: Online",
+    "event_url": "https://hackfest.dscadmu.org/",
+    "type": "workshop",
+    "date": "2020-11-24",
+    "venue": "Online"
+  },
+  {
+    "title": "Introduction to JavaScript",
+    "event_title": "DSC CIT-U Webinar - Introduction to JavaScript",
+    "event_url": "https://dsc.community.dev/events/details/developer-student-clubs-cebu-institute-of-technology-university-presents-introduction-to-javascript/",
+    "type": "workshop",
+    "date": "2020-11-21",
+    "venue": "Online"
+  },
+  {
+    "title": "Starting our own open source projects",
+    "event_title": "Cebu Hacktoberfest 2020",
+    "event_url": "https://www.facebook.com/events/805640620189325",
+    "type": "talk",
+    "date": "2020-10-31",
+    "venue": "Online"
+  },
+  {
+    "title": "Building PWAs using Workbox",
+    "event_title": "Code Camp by Ehrlich",
+    "event_url": "",
+    "type": "talk",
+    "date": "2020-08-07",
+    "venue": "Online"
+  },
+  {
+    "title": "Building PWAs using Workbox",
+    "event_title": "web.dev LIVE Cebu",
+    "event_url": "https://www.meetup.com/GDGCebu/events/271473987/",
+    "type": "talk",
+    "date": "2020-08-01",
+    "venue": "Online"
+  },
+  {
+    "title": "Introduction to Other Firebase Features",
+    "event_title": "Angular Firebase On Air",
+    "event_url": "https://www.meetup.com/GDGCebu/events/271797685/",
+    "type": "talk",
+    "date": "2020-07-25",
+    "venue": "Online, via Google Meet"
+  },
+  {
+    "title": "Firebase Codelabs for Educators",
+    "event_title": "GDG Bacolod Firebase Codelabs",
+    "event_url": "https://www.meetup.com/GDG-Bacolod/events/268875865/",
+    "type": "workshop",
+    "date": "2020-03-07",
+    "venue": "University of St. La Salle, Bacolod City, PH"
+  },
+  {
+    "title": "Introduction to GraphQL",
+    "event_title": "Facebook Developer Circle: Cebu City",
+    "event_url": "",
+    "type": "workshop",
+    "date": "2020-02-22",
+    "venue": "Cebu City, PH"
+  },
+  {
+    "title": "Website Performance Optimization for your Business",
+    "event_title": "GBG BizFest GenSan 2019 - Wired Weekend Series",
+    "event_url": "https://www.facebook.com/photo.php?fbid=10157449959790090",
+    "type": "talk",
+    "date": "2019-12-14",
+    "venue": "General Santos City, PH"
+  },
+  {
+    "title": "Project Fugu - Unlocking new capabilities for the Web",
+    "event_title": "GDG DevFest Zamboanga 2019",
+    "event_url": "https://www.meetup.com/gdgzamboanga/events/264979234/",
+    "type": "talk",
+    "date": "2019-12-07",
+    "venue": "Zamboanga City, PH"
+  },
+  {
+    "title": "Project Fugu - Unlocking new capabilities for the Web",
+    "event_title": "Devfest & Bizfest Georgetown 2019",
+    "event_url": "https://devfest-bizfest.gdggeorgetown.com/",
+    "type": "talk",
+    "date": "2019-11-30",
+    "venue": "Penang, MY"
+  },
+  {
+    "title": "Project Fugu - Unlocking new capabilities for the Web",
+    "event_title": "Chrome Dev Summit Extended Cebu 2019",
+    "event_url": "https://cds.jscebu.org/",
+    "type": "talk",
+    "date": "2019-11-23",
+    "venue": "Cebu City, PH"
+  },
+  {
+    "title": "Leveling up creativity on the Web with CSS Houdini",
+    "event_title": "GDG DevFest Cebu 2019",
+    "event_url": "https://www.meetup.com/GDGCebu/events/263547887/",
+    "type": "talk",
+    "date": "2019-11-16",
+    "venue": "Golden Peak Hotel, Cebu City, PH"
+  },
+  {
+    "title": "Angular + Firebase Codelabs",
+    "event_title": "GDG Bacolod: Angular + Firebase Codelabs",
+    "event_url": "https://www.meetup.com/GDG-Bacolod/events/263378638/",
+    "type": "workshop",
+    "date": "2019-09-14",
+    "venue": "STI-WNU, Bacolod City"
+  },
+  {
+    "title": "Angular + Firebase Codelabs",
+    "event_title": "GDG Bacolod: Angular + Firebase Codelabs",
+    "event_url": "https://www.meetup.com/GDG-Bacolod/events/263378509/",
+    "type": "workshop",
+    "date": "2019-09-13",
+    "venue": "University of St. La Salle, Bacolod City, PH"
+  },
+  {
+    "title": "Collaborative To-Do App with VueJS and Firebase",
+    "event_title": "Vue.js Cebu",
+    "event_url": "https://www.facebook.com/events/518911211981273/",
+    "type": "workshop",
+    "date": "2019-08-24",
+    "venue": "Cebu City, PH"
+  },
+  {
+    "title": "What's New in Chrome and the Web",
+    "event_title": "Google I/O Extended Cebu 2019",
+    "event_url": "https://www.meetup.com/GDGCebu/events/261780936/",
+    "type": "talk",
+    "date": "2019-07-20",
+    "venue": "J Center Mall, Mandaue City, PH"
+  },
+  {
+    "title": "Scheduling Cloud Functions for Firebase",
+    "event_title": "GCP Next Extended Cebu 2019",
+    "event_url": "https://www.meetup.com/GDGCebu/events/260932605/",
+    "type": "talk",
+    "date": "2019-05-11",
+    "venue": "The Company, IT Park, Cebu City, PH"
+  },
+  {
+    "title": "Moving on from old stack to Vue.js",
+    "event_title": "Vue.js Cebu",
+    "event_url": "https://www.facebook.com/events/2358019587789533/",
+    "type": "talk",
+    "date": "2019-01-30",
+    "venue": "The Company Cebu, Mandaue City, PH"
+  },
+  {
+    "title": "Introduction to Firebase for Web Developers",
+    "event_title": "GDG DevFest Bacolod 2018",
+    "event_url": "https://www.meetup.com/GDG-Bacolod/events/254363757/",
+    "type": "talk",
+    "date": "2018-11-24",
+    "venue": "NWTF, Bacolod City"
+  },
+  {
+    "title": "Build the Future of the Web with Modern JavaScript",
+    "event_title": "Google I/O Extended Leyte 2018",
+    "event_url": "https://www.meetup.com/GDGCebu/events/252659492/",
+    "type": "talk",
+    "date": "2018-08-04",
+    "venue": "PSHS-EVC, Tacloban City"
+  },
+  {
+    "title": "Exploring Chrome DevTools Features",
+    "event_title": "Google I/O Extended Dumaguete 2018",
+    "event_url": "https://www.meetup.com/GDGCebu/events/252659333/",
+    "type": "talk",
+    "date": "2018-07-28",
+    "venue": "Silliman University, Dumaguete, PH"
+  },
+  {
+    "title": "Build the Future of the Web with Modern JavaScript",
+    "event_title": "Google I/O Extended Cebu 2018",
+    "event_url": "https://www.meetup.com/GDGCebu/events/251019160/",
+    "type": "talk",
+    "date": "2018-07-21",
+    "venue": "USC - Talamban, Cebu City, PH"
+  },
+  {
+    "title": "Mobile Sites Certification Study Jam: USJR Cebu - Basak Campus",
+    "event_title": "Mobile Sites Certification Study Jam",
+    "event_url": "https://www.meetup.com/GDGCebu/events/249698056/",
+    "type": "talk",
+    "date": "2018-04-14",
+    "venue": "USJR - Basak, Cebu City"
+  },
+  {
+    "title": "Mobile Site Certification Study Jam",
+    "event_title": "Women TechMakers Cebu 2018",
+    "event_url": "https://www.meetup.com/GDGCebu/events/248912409/",
+    "type": "talk",
+    "date": "2018-04-07",
+    "venue": "The Company Cebu, Cebu City, PH"
+  },
+  {
+    "title": "Mobile Sites Certification Study Jam - UP Cebu",
+    "event_title": "Mobile Sites Certification Study Jam",
+    "event_url": "https://www.meetup.com/GDGCebu/events/248568758/",
+    "type": "talk",
+    "date": "2018-03-14",
+    "venue": "UP Cebu, Cebu City, PH"
+  },
+  {
+    "title": "Mobile Sites Certification Study Jam - CIT-U",
+    "event_title": "Mobile Sites Certification Study Jam",
+    "event_url": "https://www.meetup.com/GDGCebu/events/248568429/",
+    "type": "talk",
+    "date": "2018-03-10",
+    "venue": "CIT-U, Cebu City, PH"
+  },
+  {
+    "title": "New Web Platform APIs",
+    "event_title": "Devfest gDayX Cebu 2017",
+    "event_url": "https://www.facebook.com/events/698427890352067/",
+    "type": "talk",
+    "date": "2017-11-18",
+    "venue": "J Center Mall, Cebu City, PH"
+  },
+  {
+    "title": "Introduction to Firebase",
+    "event_title": "Google I/O Extended Leyte 2017",
+    "event_url": "https://www.facebook.com/events/140017629924114/",
+    "type": "talk",
+    "date": "2017-08-19",
+    "venue": "Ritz Tower, Tacloban City, PH"
+  },
+  {
+    "title": "Firebase Workshop",
+    "event_title": "GDG Cebu DevMeets",
+    "event_url": "https://www.facebook.com/events/123623821609630/",
+    "type": "workshop",
+    "date": "2017-08-18",
+    "venue": "Symph Office, Cebu City, PH"
+  },
+  {
+    "title": "Introduction to Progressive Web Apps",
+    "event_title": "Google I/O Extended Cebu 2017",
+    "event_url": "https://www.facebook.com/events/459539484399953/",
+    "type": "talk",
+    "date": "2017-07-01",
+    "venue": "J Center Mall, Cebu City, PH"
+  },
+  {
+    "title": "Material Design with Polymer",
+    "event_title": "A SPACE Cebu Workshop",
+    "event_url": "https://www.facebook.com/events/964953276950438/",
+    "type": "workshop",
+    "date": "2016-09-20",
+    "venue": "A SPACE Cebu, Cebu City, PH"
+  },
+  {
+    "title": "JavaScript All The Things!",
+    "event_title": "Manila JavaScript #11",
+    "event_url": "https://www.facebook.com/events/1187544751288028/",
+    "type": "talk",
+    "date": "2016-09-16",
+    "venue": "iioffice CEBU, Cebu City, PH"
+  },
+  {
+    "title": "Introduction to Service Workers",
+    "event_title": "GCP Next Extended Cebu 2016",
+    "event_url": "https://www.facebook.com/events/1777733715789866/",
+    "type": "talk",
+    "date": "2016-05-04",
+    "venue": "Diamond Suites, Cebu City, PH"
+  }
+]

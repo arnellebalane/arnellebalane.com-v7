@@ -1,0 +1,66 @@
+[
+  {
+    "position": "Frontend Engineer II",
+    "company": "Amazon Web Services",
+    "start_date": "November 2022",
+    "end_date": null,
+    "is_present": true,
+    "image_url": "/images/experience/aws.png",
+    "details": [
+      "Implement new frontend experiences and functionalities for the AWS IAM Identity Center console and AWS Access Portal",
+      "Develop enhancements in the infrastructure, automated tests, and monitoring for frontend applications",
+      "Write technical design documents for new features and perform code reviews"
+    ]
+  },
+  {
+    "position": "Software Developer",
+    "company": "Newlogic",
+    "start_date": "February 2019",
+    "end_date": "October 2022",
+    "is_present": false,
+    "image_url": "/images/experience/newlogic.png",
+    "details": [
+      "Develop new features for various mobile and Web applications using AngularJS, Angular, VueJS, Cordova, Ionic, and Electron",
+      "Write technical documentation and perform code reviews"
+    ]
+  },
+  {
+    "position": "Web Developer",
+    "company": "ChannelFix",
+    "start_date": "June 2015",
+    "end_date": "January 2019",
+    "is_present": false,
+    "image_url": "/images/experience/channelfix.png",
+    "details": [
+      "Oversee the design and development of a video-driven recruitment and seat-leasing platform built with VueJS and Django",
+      "Collaborate on the implementation of the video tournament platform backend using Django framework",
+      "Implement the core reusable JavaScript modules for the channelfix.com video tournament platform",
+      "Lead the frontend migration efforts into VueJS in order to modernize the technology stack",
+      "Write technical documentation and perform code reviews"
+    ]
+  },
+  {
+    "position": "Lecturer",
+    "company": "University of the Philippines Cebu",
+    "start_date": "January 2017",
+    "end_date": "May 2017",
+    "is_present": false,
+    "image_url": "/images/experience/up-cebu.png",
+    "details": [
+      "Teach lectures for a Web Engineering class",
+      "Handle laboratory classes about Web Engineering and Data Structures"
+    ]
+  },
+  {
+    "position": "Web Developer",
+    "company": "Bootyard",
+    "start_date": "January 2012",
+    "end_date": "July 2012",
+    "is_present": false,
+    "image_url": "/images/experience/bootyard.png",
+    "details": [
+      "Help to build the frontend for the Codetoki learn-to-code platform using Haml, Sass, and CoffeeScript",
+      "Develop the frontend for the Foodtoki project, a local restaurant discovery website"
+    ]
+  }
+]
