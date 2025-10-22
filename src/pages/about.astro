@@ -1,0 +1,72 @@
+---
+import { Image } from 'astro:assets';
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import aboutImage from '../images/about.png';
+
+const experiences = await getCollection('experiences');
+---
+
+<BaseLayout title="About">
+    <div class="flex flex-col gap-10 pt-10 pb-36">
+        <h1 class="text-3xl font-semibold leading-none text-center">About Me</h1>
+
+        <div class="flex flex-col gap-5">
+            <div>
+                <p class="text-xl mb-5">
+                    Hello! I’m Arnelle, a software developer based in Seattle. I enjoy building things using good old
+                    HTML, CSS, JavaScript, and Web Platform APIs.
+                </p>
+                <p class="text-xl">
+                    When not busy experimenting with new Web APIs, I like to spend my time taking photos, playing video
+                    games, or practicing my card tricks.
+                </p>
+            </div>
+
+            <Image
+                src={aboutImage}
+                alt="Arnelle Balane"
+                class="w-full rounded-lg object-cover object-top aspect-[1.25]"
+            />
+        </div>
+
+        <div>
+            <h2 class="text-2xl font-semibold mb-5">Experience</h2>
+
+            <ol class="-mt-5">
+                {
+                    experiences.map(({ data: experience }) => (
+                        <li class="py-5">
+                            <div class="flex gap-3 items-start">
+                                <div class="grow mb-3">
+                                    <h3 class="text-xl leading-none mb-1">
+                                        <strong class="font-semibold">{experience.position}</strong>,{' '}
+                                        {experience.company}
+                                    </h3>
+                                    <p class="text-sm">
+                                        {experience.start_date} &mdash;
+                                        {experience.is_present ? 'Present' : experience.end_date}
+                                    </p>
+                                </div>
+
+                                <Image
+                                    src={experience.image_url}
+                                    alt={experience.company}
+                                    width="45"
+                                    height="45"
+                                    class="shrink-0 w-10 aspect-square border border-slate-200 rounded-sm"
+                                />
+                            </div>
+
+                            <ul class="pl-5 list-disc">
+                                {experience.details.map((detail) => (
+                                    <li class="text-zinc-600">{detail}</li>
+                                ))}
+                            </ul>
+                        </li>
+                    ))
+                }
+            </ol>
+        </div>
+    </div>
+</BaseLayout>
