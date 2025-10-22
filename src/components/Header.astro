@@ -3,7 +3,10 @@ import { Image } from 'astro:assets';
 import avatarImage from '../images/avatar-sm.jpg';
 import Navigation from './Navigation.astro';
 
-const isHomeRoute = Astro.url.pathname === '/';
+interface Props {
+    isHomeRoute?: boolean;
+}
+const { isHomeRoute } = Astro.props;
 ---
 
 <header class:list={['px-4 py-2 sm:p-5', { 'sm:hidden': isHomeRoute }]}>
