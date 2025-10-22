@@ -1,0 +1,34 @@
+---
+import { getCollection } from 'astro:content';
+
+const socials = await getCollection('socials');
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="text-slate-200 bg-zinc-900">
+    <div class="flex flex-col gap-10 px-5 py-10">
+        <div>
+            <p class="text-xs text-red-100 uppercase tracking-normal mb-2">Say Hello</p>
+            <a href="mailto:arnellebalane@gmail.com" class="text-base">arnellebalane@gmail.com</a>
+        </div>
+
+        <div>
+            <p class="text-xs text-red-100 uppercase tracking-normal mb-2">Follow Me</p>
+            <div class="flex flex-wrap gap-x-3 gap-y-2">
+                {
+                    socials.map(({ data: social }) => (
+                        <a href={social.url} target="_blank" rel="noopener noreferrer" class="text-base">
+                            {social.name}
+                        </a>
+                    ))
+                }
+            </div>
+        </div>
+    </div>
+
+    <div class="p-5 border-t border-copy">
+        <p class="text-xs text-red-100 uppercase tracking-normal">
+            &copy; {currentYear}, Arnelle Balane
+        </p>
+    </div>
+</footer>
