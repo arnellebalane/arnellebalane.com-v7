@@ -14,4 +14,15 @@ const experiences = defineCollection({
     }),
 });
 
-export const collections = { experiences };
+const socials = defineCollection({
+    loader: file('data/socials.json'),
+    schema: z.object({
+        name: z.string(),
+        url: z.string(),
+    }),
+});
+
+export const collections = {
+    experiences,
+    socials,
+};
