@@ -1,0 +1,33 @@
+---
+import { Image } from 'astro:assets';
+import { getCollection } from 'astro:content';
+
+const socials = await getCollection('socials');
+---
+
+<div>
+    <h2 class="text-2xl font-semibold mb-5">Get In Touch</h2>
+
+    <p class="text-xl mb-5">
+        Although I’m currently not available for hire, my inbox is always open for possible collaboration or just to say
+        hi! You can reach me at
+        <a href="mailto:arnellebalane@gmail.com" class="text-primary">arnellebalane@gmail.com</a>
+    </p>
+    <p class="text-xl mb-5">I can also be found in these other platforms:</p>
+
+    <div class="flex flex-wrap gap-2">
+        {
+            socials.map(({ data: social, id }) => (
+                <a
+                    href={social.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="flex items-center gap-1 px-2 py-1 rounded-sm outline-offset-2 text-base bg-slate-200 focus:bg-slate-300 hover:bg-slate-300"
+                >
+                    <Image src={`/images/socials/${id}.svg`} alt={social.name} width="24" height="24" />
+                    {social.name}
+                </a>
+            ))
+        }
+    </div>
+</div>

@@ -1,0 +1,19 @@
+---
+import { Image } from 'astro:assets';
+import aboutImage from '../../images/about.png';
+---
+
+<div class="flex flex-col gap-5">
+    <div>
+        <p class="text-xl mb-5">
+            Hello! I’m Arnelle, a software developer based in Seattle. I enjoy building things using good old HTML, CSS,
+            JavaScript, and Web Platform APIs.
+        </p>
+        <p class="text-xl">
+            When not busy experimenting with new Web APIs, I like to spend my time taking photos, playing video games,
+            or practicing my card tricks.
+        </p>
+    </div>
+
+    <Image src={aboutImage} alt="Arnelle Balane" class="w-full rounded-lg object-cover object-top aspect-[1.25]" />
+</div>
