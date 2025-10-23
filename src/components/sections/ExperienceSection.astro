@@ -1,0 +1,22 @@
+---
+import { getCollection } from 'astro:content';
+import Experience from '../Experience.astro';
+
+const experiences = await getCollection('experiences');
+---
+
+<div>
+    <h2 class="text-2xl sm:text-3xl font-semibold mb-5 sm:mb-8">Experience</h2>
+
+    <ol class="-mt-5 sm:-mt-8">
+        {
+            experiences.map(({ data: experience }, index) => (
+                <Experience
+                    experience={experience}
+                    isFirstItem={index === 0}
+                    isLastItem={index === experiences.length - 1}
+                />
+            ))
+        }
+    </ol>
+</div>

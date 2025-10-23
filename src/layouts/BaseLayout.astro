@@ -31,7 +31,7 @@ const isHomeRoute = Astro.url.pathname === '/';
     <body class="text-lg text-copy tracking-tight antialiased bg-slate-100">
         <Header isHomeRoute={isHomeRoute} />
 
-        <div class="px-5">
+        <div class="max-w-5xl px-5 mx-auto">
             <slot />
         </div>
 
