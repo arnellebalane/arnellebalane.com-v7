@@ -8,6 +8,21 @@
     "tags": ["Chrome Extensions", "Svelte"]
   },
   {
+    "id": "iot-record-player",
+    "name": "IoT Record Player",
+    "description": "Record player built with ESP8266, PN532, and Spotify Web API",
+    "repo_url": "https://github.com/arnellebalane/iot-record-player",
+    "tags": ["C++", "ESP8266", "Spotify API"]
+  },
+  {
+    "id": "isthisgovphsitesecure",
+    "name": "is this gov.ph site secure?",
+    "description": "Show which gov.ph sites are secure and when their SSL certificates expire",
+    "repo_url": "https://github.com/arnellebalane/isthisgovphsitesecure.com",
+    "project_url": "https://isthisgovphsitesecure.netlify.app/",
+    "tags": ["Vue.js"]
+  },
+  {
     "id": "google-meet-pip",
     "name": "Google Meet PiP",
     "description": "A Google Chrome extension that displays a selected Google Meet participant's video in a Picture-in-Picture window.",
@@ -111,13 +126,6 @@
     "tags": ["Firebase"]
   },
   {
-    "id": "trex-runner",
-    "name": "trex-runner",
-    "description": "Chromium's offline T-rex game extracted from the Chromium repository.",
-    "repo_url": "https://github.com/arnellebalane/trex-runner",
-    "tags": ["JavaScript", "Canvas API"]
-  },
-  {
     "id": "wifi-cli",
     "name": "wifi-cli",
     "description": "Manage wireless network connections from the command line.",
@@ -132,21 +140,6 @@
     "repo_url": "https://github.com/arnellebalane/imgur-upload-cli",
     "project_url": "https://www.npmjs.com/package/imgur-upload-cli",
     "tags": ["Node.js", "Imgur API", "CLI"]
-  },
-  {
-    "id": "devcomic",
-    "name": "devcomic",
-    "description": "Get latest dev comics from several comic sites.",
-    "repo_url": "https://github.com/arnellebalane/devcomic",
-    "project_url": "https://www.npmjs.com/package/devcomic",
-    "tags": ["TypeScript", "Node.js"]
-  },
-  {
-    "id": "speech-simsimi",
-    "name": "speech-simsimi",
-    "description": "Interact with SimSimi chatbot using the Speech Recognition and Speech Synthesis APIs.",
-    "repo_url": "https://github.com/arnellebalane/speech-simsimi",
-    "tags": ["JavaScript", "SpeechRecognition API", "SpeechSynthesis API"]
   },
   {
     "id": "prettylogger",
