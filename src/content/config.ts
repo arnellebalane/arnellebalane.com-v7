@@ -22,7 +22,19 @@ const socials = defineCollection({
     }),
 });
 
+const projects = defineCollection({
+    loader: file('data/projects.json'),
+    schema: z.object({
+        name: z.string(),
+        description: z.string(),
+        repo_url: z.string(),
+        project_url: z.string().optional(),
+        tags: z.array(z.string()),
+    }),
+});
+
 export const collections = {
     experiences,
     socials,
+    projects,
 };
