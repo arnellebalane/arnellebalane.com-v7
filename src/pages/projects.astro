@@ -13,5 +13,17 @@ const projects = await getCollection('projects');
         <ul class="grid grid-cols-1 gap-5 md:grid-cols-2 2xl:grid-cols-3">
             {projects.map(({ data: project }) => <Project project={project} />)}
         </ul>
+
+        <p class="text-xl text-center">
+            ...and many more in my
+            <a
+                href="https://github.com/arnellebalane?tab=repositories"
+                class="text-primary hover:underline focus:underline"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                GitHub profile
+            </a>
+        </p>
     </div>
 </BaseLayout>
