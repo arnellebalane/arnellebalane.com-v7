@@ -13,15 +13,21 @@ html {
 
 .app-article {
     h2 {
-        margin-block-start: theme('spacing.10');
         font-size: theme('text.2xl');
         font-weight: 600;
+
+        &:not(:first-child) {
+            margin-block-start: theme('spacing.10');
+        }
     }
 
     h3 {
-        margin-block-start: theme('spacing.8');
         font-size: theme('text.xl');
         font-weight: 600;
+
+        &:not(:first-child) {
+            margin-block-start: theme('spacing.8');
+        }
     }
 
     p:has(img) {
@@ -38,16 +44,23 @@ html {
         font-weight: 600;
     }
 
-    :not(pre) code {
+    :not(pre) > code {
         padding: theme('spacing.1') theme('spacing.2');
         border-radius: theme('spacing.1');
         background-color: theme('color.slate.200');
+        word-wrap: break-word;
     }
 
     pre {
         padding: theme('spacing.5');
         margin-inline: calc(-1 * theme('spacing.5'));
         line-height: 1;
+
+        li > & {
+            margin-block: theme('spacing.4');
+            border-top-left-radius: theme('spacing.1');
+            border-bottom-left-radius: theme('spacing.1');
+        }
     }
 
     ul,
@@ -74,12 +87,10 @@ html {
 
     @media (min-width: 40rem) {
         h2 {
-            margin-block-start: theme('spacing.8');
             font-size: theme('text.3xl');
         }
 
         h3 {
-            margin-block-start: theme('spacing.6');
             font-size: theme('text.2xl');
         }
 
