@@ -41,7 +41,6 @@ html {
     :not(pre) code {
         padding: theme('spacing.1') theme('spacing.2');
         border-radius: theme('spacing.1');
-        /* font-weight: 700; */
         background-color: theme('color.slate.200');
     }
 
@@ -82,6 +81,11 @@ html {
         h3 {
             margin-block-start: theme('spacing.6');
             font-size: theme('text.2xl');
+        }
+
+        pre,
+        img {
+            border-radius: theme('spacing.1');
         }
     }
 }
