@@ -2,7 +2,7 @@
 layout: ../../layouts/ArticleLayout.astro
 title: 'Async Clipboard API: Accessing the clipboard using JavaScript'
 summary: 'This article shows how to use the Async Clipboard API to access the system clipboard very easily.'
-cover_image: ../../images/writing/async-clipboard-api/cover.jpg
+cover_image: ../../images/blog/async-clipboard-api/cover.jpg
 date: 2019-09-06
 ---
 
@@ -81,7 +81,7 @@ the clipboard. The first time a site tries to read the contents of the
 clipboard, the browser prompts the user whether they want to allow the request
 or not:
 
-![Clipboard access permission prompt in Chrome](../../images/writing/async-clipboard-api/clipboard-permission-prompt.jpg)
+![Clipboard access permission prompt in Chrome](../../images/blog/async-clipboard-api/clipboard-permission-prompt.jpg)
 
 > **Note:** In Chrome, permission to read the clipboard is automatically denied
 > when the user has dismissed it several times (~3 times from my observation).
