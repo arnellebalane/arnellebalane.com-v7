@@ -63,7 +63,7 @@
     "venue": "Online"
   },
   {
-    "id": "building-pwas-using-workbox",
+    "id": "building-pwas-using-workbox-codecamp",
     "title": "Building PWAs using Workbox",
     "event_title": "Code Camp by Ehrlich",
     "event_url": "",
@@ -72,7 +72,7 @@
     "venue": "Online"
   },
   {
-    "id": "building-pwas-using-workbox",
+    "id": "building-pwas-using-workbox-webdev",
     "title": "Building PWAs using Workbox",
     "event_title": "web.dev LIVE Cebu",
     "event_url": "https://www.meetup.com/GDGCebu/events/271473987/",
@@ -216,7 +216,7 @@
     "venue": "NWTF, Bacolod City"
   },
   {
-    "id": "build-the-future-of-the-web-with-modern-javascript",
+    "id": "build-the-future-of-the-web-with-modern-javascript-leyte",
     "title": "Build the Future of the Web with Modern JavaScript",
     "event_title": "Google I/O Extended Leyte 2018",
     "event_url": "https://www.meetup.com/GDGCebu/events/252659492/",
@@ -234,7 +234,7 @@
     "venue": "Silliman University, Dumaguete, PH"
   },
   {
-    "id": "build-the-future-of-the-web-with-modern-javascript",
+    "id": "build-the-future-of-the-web-with-modern-javascript-cebu",
     "title": "Build the Future of the Web with Modern JavaScript",
     "event_title": "Google I/O Extended Cebu 2018",
     "event_url": "https://www.meetup.com/GDGCebu/events/251019160/",
