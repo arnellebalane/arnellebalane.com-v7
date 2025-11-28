@@ -72,4 +72,16 @@ html {
         border-block-start: theme('spacing.1') dotted theme('color.slate.300');
         margin-block: theme('spacing.8');
     }
+
+    @media (min-width: 40rem) {
+        h2 {
+            margin-block-start: theme('spacing.8');
+            font-size: theme('text.3xl');
+        }
+
+        h3 {
+            margin-block-start: theme('spacing.6');
+            font-size: theme('text.2xl');
+        }
+    }
 }

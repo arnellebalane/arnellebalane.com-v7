@@ -24,16 +24,18 @@ const articleDate = new Date(frontmatter.date).toLocaleDateString('en-US', { dat
         <meta name="generator" content={Astro.generator} />
     </head>
 
-    <body class="text-xl text-copy tracking-tight antialiased bg-slate-100">
+    <body class="text-lg text-copy tracking-tight antialiased bg-slate-100">
         <Header />
 
-        <article class="flex flex-col gap-10 box-content max-w-3xl mx-auto px-5 pt-10 sm:pt-12 pb-36 sm:pb-62">
+        <article
+            class="flex flex-col gap-10 sm:gap-12 box-content max-w-3xl mx-auto px-5 pt-10 sm:pt-12 pb-36 sm:pb-62"
+        >
             <header>
-                <h1 class="mb-5 text-3xl font-semibold leading-none">{frontmatter.title}</h1>
-                <time datetime={frontmatter.date} class="text-lg">{articleDate}</time>
+                <h1 class="mb-5 text-3xl sm:text-5xl font-semibold leading-none">{frontmatter.title}</h1>
+                <time datetime={frontmatter.date}>{articleDate}</time>
             </header>
 
-            <div class="app-article flex flex-col gap-6">
+            <div class="app-article flex flex-col gap-6 text-xl">
                 <slot />
             </div>
         </article>
