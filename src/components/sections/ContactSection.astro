@@ -12,9 +12,7 @@ const socials = await getCollection('socials');
         <p class="text-xl mb-5 sm:mb-6">
             My inbox is always open for open-source collaboration inquiries and speaking or mentoring opportunities! You
             can reach me at
-            <a href="mailto:arnellebalane@gmail.com" class="text-primary hover:underline focus:underline">
-                arnellebalane@gmail.com
-            </a>
+            <a href="mailto:arnellebalane@gmail.com" class="text-primary underline"> arnellebalane@gmail.com </a>
         </p>
         <p class="text-xl mb-5 sm:mb-6">I can also be found in these other platforms:</p>
 
@@ -27,7 +25,7 @@ const socials = await getCollection('socials');
                         rel="noopener noreferrer"
                         class="flex items-center gap-1 px-2 py-1 rounded-sm outline-offset-2 text-base bg-slate-200 hover:bg-slate-300 focus:bg-slate-300"
                     >
-                        <Image src={`/images/socials/${id}.svg`} alt={social.name} width="24" height="24" />
+                        <Image src={`/images/socials/${id}.svg`} alt="" width="24" height="24" />
                         {social.name}
                     </a>
                 ))
