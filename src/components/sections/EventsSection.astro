@@ -5,15 +5,15 @@ import Event from '../Event.astro';
 interface Props {
     title?: string;
     events: InferEntrySchema<'events'>[];
-    expandedLayout?: boolean;
+    featured?: boolean;
 }
-const { title, events, expandedLayout } = Astro.props;
+const { title, events, featured } = Astro.props;
 ---
 
 <section>
     {title && <h2 class="text-2xl sm:text-3xl font-semibold mb-5 sm:mb-8">{title}</h2>}
 
-    <ul class="grid grid-cols-1 gap-5 md:grid-cols-2 2xl:grid-cols-3">
-        {events.map((event) => <Event event={event} expandedLayout={expandedLayout} />)}
+    <ul class:list={['grid grid-cols-1 gap-5', { 'md:grid-cols-2 2xl:grid-cols-3': !featured }]}>
+        {events.map((event) => <Event event={event} featured={featured} />)}
     </ul>
 </section>

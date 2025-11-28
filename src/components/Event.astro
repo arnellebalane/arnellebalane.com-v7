@@ -3,35 +3,46 @@ import type { InferEntrySchema } from 'astro:content';
 
 interface Props {
     event: InferEntrySchema<'events'>;
-    expandedLayout?: boolean;
+    featured?: boolean;
 }
-const { event, expandedLayout } = Astro.props;
+const { event, featured } = Astro.props;
 const eventDate = new Date(event.date).toLocaleDateString('en-US', {
     dateStyle: 'long',
 });
 const eventType = event.type.charAt(0).toUpperCase() + event.type.substring(1);
 ---
 
-<li class="flex flex-col rounded bg-slate-50">
-    <div class="flex flex-col grow p-5 border-b border-b-slate-200">
-        <h2 class="mb-3 text-xl font-semibold">{event.title}</h2>
-        <p class="mb-8 text-zinc-600">{event.event_title}</p>
+<li class:list={['flex flex-col rounded bg-slate-50', { 'md:flex-row md:gap-5 md:bg-transparent': featured }]}>
+    {featured && <div class="grow basis-0 aspect-[16/10] rounded bg-slate-200" />}
 
-        <ul class="flex flex-wrap gap-x-2 mt-auto">
-            <li class="text-base text-zinc-600 after:content-['·'] after:ml-2">{eventDate}</li>
-            <li class="text-base text-zinc-600 after:content-['·'] after:ml-2">{eventType}</li>
-            <li class="text-base text-zinc-600">{event.venue}</li>
-        </ul>
-    </div>
-
-    <div class="flex gap-1 px-5 py-2 -mx-2">
-        <a
-            href={event.event_url}
-            class="text-base text-primary px-2 py-1 rounded outline-offset-2 hover:bg-slate-200 focus:bg-slate-200"
-            target="_blank"
-            rel="noopener noreferrer"
+    <div class:list={['flex flex-col grow basis-0', { 'md:gap-4 md:py-6': featured }]}>
+        <div
+            class:list={[
+                'flex flex-col grow p-5 border-b border-b-slate-200',
+                { 'md:grow-0 md:gap-5 md:p-0 md:border-none': featured },
+            ]}
         >
-            Visit event website
-        </a>
+            <h2 class:list={['mb-3 text-xl font-semibold', { 'md:mb-0 md:text-3xl': featured }]}>
+                {event.title}
+            </h2>
+            <p class:list={['mb-8 text-zinc-600', { 'md:mb-0 md:text-xl': featured }]}>{event.event_title}</p>
+
+            <ul class:list={['flex flex-wrap gap-x-2 mt-auto', { 'md:mt-5': featured }]}>
+                <li class="text-base text-zinc-600 after:content-['·'] after:ml-2">{eventDate}</li>
+                <li class="text-base text-zinc-600 after:content-['·'] after:ml-2">{eventType}</li>
+                <li class="text-base text-zinc-600">{event.venue}</li>
+            </ul>
+        </div>
+
+        <div class:list={['flex gap-1 px-5 py-2 -mx-2', { 'md:p-0': featured }]}>
+            <a
+                href={event.event_url}
+                class="text-base text-primary px-2 py-1 rounded outline-offset-2 hover:bg-slate-200 focus:bg-slate-200"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Visit event website
+            </a>
+        </div>
     </div>
 </li>
