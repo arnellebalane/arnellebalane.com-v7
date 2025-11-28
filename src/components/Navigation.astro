@@ -1,5 +1,5 @@
 ---
-import MenuIcon from '../images/menu.svg';
+import MenuIcon from './icons/MenuIcon.astro';
 
 const links = [
     { text: 'About', href: '/about' },
@@ -27,6 +27,6 @@ const getCurrentClass = (href: string) => (Astro.url.pathname.startsWith(href) ?
     }
 </nav>
 
-<button class="block sm:hidden" aria-label="Toggle menu">
-    <MenuIcon class="size-8 p-1" />
+<button class="block sm:hidden p-1" aria-label="Toggle menu">
+    <MenuIcon />
 </button>

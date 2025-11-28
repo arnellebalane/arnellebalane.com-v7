@@ -1,6 +1,7 @@
 ---
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
+import CalendarIcon from '../components/icons/CalendarIcon.astro';
 import '../styles/article.css';
 
 const { frontmatter } = Astro.props;
@@ -32,7 +33,10 @@ const articleDate = new Date(frontmatter.date).toLocaleDateString('en-US', { dat
         >
             <header>
                 <h1 class="mb-5 text-3xl sm:text-5xl font-semibold leading-none">{frontmatter.title}</h1>
-                <time datetime={frontmatter.date}>{articleDate}</time>
+                <time datetime={frontmatter.date} class="flex items-center gap-2">
+                    <CalendarIcon class="size-5" />
+                    {articleDate}
+                </time>
             </header>
 
             <div class="app-article flex flex-col gap-6 text-xl">
