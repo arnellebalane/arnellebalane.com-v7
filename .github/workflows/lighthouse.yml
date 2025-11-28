@@ -17,10 +17,10 @@ jobs:
               if: github.event_name == 'pull_request'
               with:
                   urls: |
-                      https://deploy-preview-$PR_NUMBER--arnellebalane-v7.netlify.com/
-                      https://deploy-preview-$PR_NUMBER--arnellebalane-v7.netlify.com/about/
-                      https://deploy-preview-$PR_NUMBER--arnellebalane-v7.netlify.com/projects/
-                      https://deploy-preview-$PR_NUMBER--arnellebalane-v7.netlify.com/events/
+                      https://deploy-preview-$PR_NUMBER--arnellebalane-v7.netlify.app/
+                      https://deploy-preview-$PR_NUMBER--arnellebalane-v7.netlify.app/about/
+                      https://deploy-preview-$PR_NUMBER--arnellebalane-v7.netlify.app/projects/
+                      https://deploy-preview-$PR_NUMBER--arnellebalane-v7.netlify.app/events/
                   budgetPath: ./budget.json
                   serverBaseUrl: ${{ secrets.LHCI_SERVER_BASE_URL }}
                   serverToken: ${{ secrets.LHCI_SERVER_TOKEN }}
