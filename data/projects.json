@@ -5,6 +5,7 @@
     "description": "A web application and Google Chrome extension that replaces the new tab page with a simple todo list.",
     "repo_url": "https://github.com/arnellebalane/simple-todo",
     "project_url": "https://simple-todo.arnelle.dev/",
+    "category": "web-application",
     "tags": ["Chrome Extensions", "Svelte"]
   },
   {
@@ -12,6 +13,7 @@
     "name": "IoT Record Player",
     "description": "Record player built with ESP8266, PN532, and Spotify Web API",
     "repo_url": "https://github.com/arnellebalane/iot-record-player",
+    "category": "hardware",
     "tags": ["C++", "ESP8266", "Spotify API"]
   },
   {
@@ -20,15 +22,8 @@
     "description": "Show which gov.ph sites are secure and when their SSL certificates expire",
     "repo_url": "https://github.com/arnellebalane/isthisgovphsitesecure.com",
     "project_url": "https://isthisgovphsitesecure.netlify.app/",
+    "category": "web-application",
     "tags": ["Vue.js"]
-  },
-  {
-    "id": "google-meet-pip",
-    "name": "Google Meet PiP",
-    "description": "A Google Chrome extension that displays a selected Google Meet participant's video in a Picture-in-Picture window.",
-    "repo_url": "https://github.com/arnellebalane/google-meet-pip",
-    "project_url": "https://chromewebstore.google.com/detail/google-meet-pip/ibkkdnfblcekolaagnljieekcaccfpjo",
-    "tags": ["Chrome Extensions", "Vue.js"]
   },
   {
     "id": "figma-dot-grid-plugin",
@@ -36,6 +31,7 @@
     "description": "Figma plugin to easily generate dot grids for your Figma designs.",
     "repo_url": "https://github.com/arnellebalane/figma-dot-grid",
     "project_url": "https://www.figma.com/community/plugin/795474715778185230/dot-grid",
+    "category": "tools",
     "tags": ["TypeScript", "Figma API"]
   },
   {
@@ -43,6 +39,7 @@
     "name": "Houdini Paint Dot Grid",
     "description": "Draw dot grid backgrounds using CSS Paint API.",
     "repo_url": "https://github.com/arnellebalane/houdini-paint-dot-grid",
+    "category": "tools",
     "tags": ["JavaScript", "CSS Houdini"]
   },
   {
@@ -51,6 +48,7 @@
     "description": "A Web application for hosting code snippets online. Inspired by putco.de.",
     "repo_url": "https://github.com/arnellebalane/snippets",
     "project_url": "https://snippets.arnelle.dev/",
+    "category": "web-application",
     "tags": ["Vue.js", "Express.js"]
   },
   {
@@ -59,6 +57,7 @@
     "description": "A Parcel.js plugin to bundle resources defined in data-src and data-srcset attributes.",
     "repo_url": "https://github.com/arnellebalane/parcel-plugin-data-src",
     "project_url": "https://www.npmjs.com/package/parcel-plugin-data-src",
+    "category": "tools",
     "tags": ["JavaScript", "Parcel.js"]
   },
   {
@@ -67,6 +66,7 @@
     "description": "Sublime Text plugin for opening the remote git url for the current file.",
     "repo_url": "https://github.com/arnellebalane/sublime-open-in-git-repository",
     "project_url": "https://packagecontrol.io/packages/Open%20in%20Git%20Repository",
+    "category": "tools",
     "tags": ["Sublime Text", "Python"]
   },
   {
@@ -75,6 +75,7 @@
     "description": "A command-line tool for generating Material Design icons.",
     "repo_url": "https://github.com/arnellebalane/mdi-cli",
     "project_url": "https://www.npmjs.com/package/mdi-cli",
+    "category": "tools",
     "tags": ["Node.js", "Puppeteer", "CLI"]
   },
   {
@@ -83,6 +84,7 @@
     "description": "A Vue.js plugin that reports element intersections using the IntersectionObserver API.",
     "repo_url": "https://github.com/arnellebalane/vue-intersect",
     "project_url": "https://www.npmjs.com/package/@arnellebalane/vue-intersect",
+    "category": "tools",
     "tags": ["Vue.js", "IntersectionObserver API"]
   },
   {
@@ -91,6 +93,7 @@
     "description": "Built the frontend of a Web application for creating URL endpoints with customizable responses, useful as dummy APIs when developing other applications.",
     "repo_url": "https://github.com/uncaughtxcptn/endpoints",
     "project_url": "https://endpoints.arnelle.dev/",
+    "category": "web-application",
     "tags": ["Vue.js", "WebSockets"]
   },
   {
@@ -99,6 +102,7 @@
     "description": "Gulp plugin for extracting static resource paths from templates.",
     "repo_url": "https://github.com/arnellebalane/gulp-extract-static",
     "project_url": "https://www.npmjs.com/package/gulp-extract-static",
+    "category": "tools",
     "tags": ["JavaScript", "Gulp"]
   },
   {
@@ -107,6 +111,7 @@
     "description": "A Web application for tracking habits using a GitHub-like calendar chart. All data is stored locally on the browser.",
     "repo_url": "https://github.com/arnellebalane/streaks",
     "project_url": "https://streaks.arnelle.dev/",
+    "category": "web-application",
     "tags": ["Vue.js", "IndexedDB"]
   },
   {
@@ -115,15 +120,8 @@
     "description": "Client-side messaging channel for sending data from one browser tab to another.",
     "repo_url": "https://github.com/arnellebalane/hermes",
     "project_url": "https://hermes.arnelle.dev/",
+    "category": "tools",
     "tags": ["JavaScript", "BroadcastChannel API", "LocalStorage", "SharedWorkers"]
-  },
-  {
-    "id": "up-cebu-intrams-scoreboard",
-    "name": "UP Cebu Intrams Scoreboard",
-    "description": "Scoreboard website for UP Cebu's Intramurals.",
-    "repo_url": "https://github.com/arnellebalane/upcebu-intrams",
-    "project_url": "https://upcebu-intrams.firebaseapp.com/",
-    "tags": ["Firebase"]
   },
   {
     "id": "wifi-cli",
@@ -131,6 +129,7 @@
     "description": "Manage wireless network connections from the command line.",
     "repo_url": "https://github.com/arnellebalane/wifi-cli",
     "project_url": "https://www.npmjs.com/package/wifi-cli",
+    "category": "tools",
     "tags": ["JavaScript", "CLI"]
   },
   {
@@ -139,6 +138,7 @@
     "description": "Upload images to imgur.com from the command line.",
     "repo_url": "https://github.com/arnellebalane/imgur-upload-cli",
     "project_url": "https://www.npmjs.com/package/imgur-upload-cli",
+    "category": "tools",
     "tags": ["Node.js", "Imgur API", "CLI"]
   },
   {
@@ -147,6 +147,7 @@
     "description": "Logs things (dicts, tuples, lists, etc.) in color and beutiful format.",
     "repo_url": "https://github.com/arnellebalane/prettylogger",
     "project_url": "https://pypi.org/project/prettylogger/",
+    "category": "tools",
     "tags": ["Python"]
   },
   {
@@ -155,6 +156,7 @@
     "description": "A small Python utility which parses nested keys in dictionaries into sub-dictionaries.",
     "repo_url": "https://github.com/arnellebalane/subdicts",
     "project_url": "https://pypi.org/project/subdicts/",
+    "category": "tools",
     "tags": ["Python"]
   },
   {
@@ -163,6 +165,7 @@
     "description": "Regular Expression parser and Non-Deterministic/Deterministic Finite Automaton Constructor.",
     "repo_url": "https://github.com/arnellebalane/automata",
     "project_url": "https://automata.arnelle.dev/",
+    "category": "web-application",
     "tags": ["JavaScript", "SVG"]
   }
 ]

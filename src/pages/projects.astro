@@ -1,18 +1,36 @@
 ---
 import { getCollection } from 'astro:content';
+import type { InferEntrySchema } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
-import Project from '../components/Project.astro';
+import ProjectsSection from '../components/sections/ProjectsSection.astro';
+
+const webProjects: InferEntrySchema<'projects'>[] = [];
+const toolsProjects: InferEntrySchema<'projects'>[] = [];
+const hardwareProjects: InferEntrySchema<'projects'>[] = [];
 
 const projects = await getCollection('projects');
+for (const project of projects) {
+    switch (project.data.category) {
+        case 'web-application':
+            webProjects.push(project.data);
+            break;
+        case 'tools':
+            toolsProjects.push(project.data);
+            break;
+        case 'hardware':
+            hardwareProjects.push(project.data);
+            break;
+    }
+}
 ---
 
 <BaseLayout title="Projects">
     <div class="flex flex-col gap-10 sm:gap-20 pt-10 sm:pt-12 pb-36">
         <h1 class="text-3xl sm:text-5xl font-semibold leading-none text-center">Projects</h1>
 
-        <ul class="grid grid-cols-1 gap-5 md:grid-cols-2 2xl:grid-cols-3">
-            {projects.map(({ data: project }) => <Project project={project} />)}
-        </ul>
+        <ProjectsSection title="Web Applications" projects={webProjects} />
+        <ProjectsSection title="Developer Tools" projects={toolsProjects} />
+        <ProjectsSection title="Hardware" projects={hardwareProjects} />
 
         <p class="text-xl text-center">
             ...and many more in my
