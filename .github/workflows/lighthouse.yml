@@ -1,0 +1,39 @@
+name: Lighthouse
+
+on:
+    pull_request:
+    push:
+        branches:
+            - main
+
+jobs:
+    check-scores:
+        name: Check Scores
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v5
+
+            - uses: treosh/lighthouse-ci-action@v12
+              if: github.event_name == 'pull_request'
+              with:
+                  urls: |
+                      https://deploy-preview-$PR_NUMBER--arnellebalane-v7.netlify.app/
+                      https://deploy-preview-$PR_NUMBER--arnellebalane-v7.netlify.app/about/
+                      https://deploy-preview-$PR_NUMBER--arnellebalane-v7.netlify.app/projects/
+                      https://deploy-preview-$PR_NUMBER--arnellebalane-v7.netlify.app/events/
+                  serverBaseUrl: ${{ secrets.LHCI_SERVER_BASE_URL }}
+                  serverToken: ${{ secrets.LHCI_SERVER_TOKEN }}
+              env:
+                  PR_NUMBER: ${{ github.event.pull_request.number }}
+
+            - uses: treosh/lighthouse-ci-action@v12
+              if: github.event_name == 'push'
+              with:
+                  urls: |
+                      https://beta.arnellebalane.com/
+                      https://beta.arnellebalane.com/about/
+                      https://beta.arnellebalane.com/projects/
+                      https://beta.arnellebalane.com/events/
+                  budgetPath: ./budget.json
+                  serverBaseUrl: ${{ secrets.LHCI_SERVER_BASE_URL }}
+                  serverToken: ${{ secrets.LHCI_SERVER_TOKEN }}
