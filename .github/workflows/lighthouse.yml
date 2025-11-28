@@ -21,7 +21,6 @@ jobs:
                       https://deploy-preview-$PR_NUMBER--arnellebalane-v7.netlify.app/about/
                       https://deploy-preview-$PR_NUMBER--arnellebalane-v7.netlify.app/projects/
                       https://deploy-preview-$PR_NUMBER--arnellebalane-v7.netlify.app/events/
-                  budgetPath: ./budget.json
                   serverBaseUrl: ${{ secrets.LHCI_SERVER_BASE_URL }}
                   serverToken: ${{ secrets.LHCI_SERVER_TOKEN }}
               env:
@@ -35,6 +34,5 @@ jobs:
                       https://beta.arnellebalane.com/about/
                       https://beta.arnellebalane.com/projects/
                       https://beta.arnellebalane.com/events/
-                  budgetPath: ./budget.json
                   serverBaseUrl: ${{ secrets.LHCI_SERVER_BASE_URL }}
                   serverToken: ${{ secrets.LHCI_SERVER_TOKEN }}
