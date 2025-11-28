@@ -34,5 +34,6 @@ jobs:
                       https://beta.arnellebalane.com/about/
                       https://beta.arnellebalane.com/projects/
                       https://beta.arnellebalane.com/events/
+                  budgetPath: ./budget.json
                   serverBaseUrl: ${{ secrets.LHCI_SERVER_BASE_URL }}
                   serverToken: ${{ secrets.LHCI_SERVER_TOKEN }}
