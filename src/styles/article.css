@@ -1,0 +1,87 @@
+@import 'tailwindcss';
+
+@theme {
+    --font-sans: 'Outfit', sans-serif;
+    --font-mono: 'Ubuntu Mono', monospace;
+    --color-primary: #8b392d;
+    --color-copy: #27272a;
+}
+
+html {
+    --wrapper-width: 1472px;
+}
+
+.app-article {
+    h2 {
+        margin-block-start: theme('spacing.10');
+        font-size: theme('text.2xl');
+        font-weight: 600;
+    }
+
+    h3 {
+        margin-block-start: theme('spacing.8');
+        font-size: theme('text.xl');
+        font-weight: 600;
+    }
+
+    p:has(img) {
+        width: calc(100% + (2 * theme('spacing.5')));
+        margin-inline: calc(-1 * theme('spacing.5'));
+    }
+
+    a {
+        text-decoration: underline;
+        color: theme('color.primary');
+    }
+
+    strong {
+        font-weight: 600;
+    }
+
+    :not(pre) code {
+        padding: theme('spacing.1') theme('spacing.2');
+        border-radius: theme('spacing.1');
+        /* font-weight: 700; */
+        background-color: theme('color.slate.200');
+    }
+
+    pre {
+        padding: theme('spacing.5');
+        margin-inline: calc(-1 * theme('spacing.5'));
+        line-height: 1;
+    }
+
+    ul,
+    ol {
+        list-style: initial;
+        padding-inline-start: theme('spacing.10');
+    }
+
+    li {
+        margin-block-end: theme('spacing.1');
+    }
+
+    blockquote {
+        padding-inline-start: theme('spacing.5');
+        padding-block: theme('spacing.3');
+        border-inline-start: theme('spacing.1') solid theme('color.slate.200');
+        font-size: theme('text.lg');
+    }
+
+    hr {
+        border-block-start: theme('spacing.1') dotted theme('color.slate.300');
+        margin-block: theme('spacing.8');
+    }
+
+    @media (min-width: 40rem) {
+        h2 {
+            margin-block-start: theme('spacing.8');
+            font-size: theme('text.3xl');
+        }
+
+        h3 {
+            margin-block-start: theme('spacing.6');
+            font-size: theme('text.2xl');
+        }
+    }
+}
