@@ -1,7 +1,7 @@
 ---
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
-import '../styles/global.css';
+import '../styles/article.css';
 
 const { frontmatter } = Astro.props;
 const articleDate = new Date(frontmatter.date).toLocaleDateString('en-US', { dateStyle: 'long' });
@@ -15,7 +15,10 @@ const articleDate = new Date(frontmatter.date).toLocaleDateString('en-US', { dat
 
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" />
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Ubuntu+Mono:wght@400;700&display=swap"
+        />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <meta name="description" content="Arnelle is a software engineer based in Seattle." />
         <meta name="generator" content={Astro.generator} />
@@ -29,7 +32,10 @@ const articleDate = new Date(frontmatter.date).toLocaleDateString('en-US', { dat
                 <h1 class="mb-5 text-3xl font-semibold leading-none">{frontmatter.title}</h1>
                 <time datetime={frontmatter.date} class="text-lg">{articleDate}</time>
             </header>
-            <slot />
+
+            <div class="app-article flex flex-col gap-6">
+                <slot />
+            </div>
         </article>
 
         <Footer />

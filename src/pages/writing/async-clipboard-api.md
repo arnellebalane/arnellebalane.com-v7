@@ -6,6 +6,25 @@ cover_image: ../../images/writing/async-clipboard-api/cover.jpg
 date: 2019-09-06
 ---
 
+Accessing the user's clipboard has not been the nicest thing to do for a long
+time. We had to use the [`document.execCommand`](https://developer.mozilla.org/en-US/docs/Web/API/Document/execCommand)
+API to copy and paste text to and from the user's clipboard, which involves the
+following steps:
+
+```js
+// #1. Use an input element
+const input = document.querySelector('input');
+
+// #2. Set the input's value to the text we want to copy to clipboard
+input.value = 'hello there!';
+
+// #3. Highlight the input's value
+input.select();
+
+// #4. Copy the highlighted text
+document.execCommand('copy');
+```
+
 The `input` element can be dynamically created and removed during the process,
 or styled to not be visible to the user. During the times that I got to use
 this approach before, I always thought that it looks ugly and not very elegant.
@@ -109,7 +128,7 @@ These events only fire when the action was performed on the page, and not when
 performed in other pages or apps.
 
 The clipboard `event` objects have a `clipboardData` property which is a
-[`DataTransfer`](https://developer.mozilla.org/en-US/docs/Web/API/DataTransfer)
+[DataTransfer](https://developer.mozilla.org/en-US/docs/Web/API/DataTransfer)
 object. This allows us to overwrite the data that will be written to the
 clipboard, giving us the opportunity to write data in other formats, such as
 `text/html`:
