@@ -1,0 +1,37 @@
+---
+import type { InferEntrySchema } from 'astro:content';
+
+interface Props {
+    event: InferEntrySchema<'events'>;
+    expandedLayout?: boolean;
+}
+const { event, expandedLayout } = Astro.props;
+const eventDate = new Date(event.date).toLocaleDateString('en-US', {
+    dateStyle: 'long',
+});
+const eventType = event.type.charAt(0).toUpperCase() + event.type.substring(1);
+---
+
+<li class="flex flex-col rounded bg-slate-50">
+    <div class="flex flex-col grow p-5 border-b border-b-slate-200">
+        <h2 class="mb-3 text-xl font-semibold">{event.title}</h2>
+        <p class="mb-8 text-zinc-600">{event.event_title}</p>
+
+        <ul class="flex flex-wrap gap-x-2 mt-auto">
+            <li class="text-base text-zinc-600 after:content-['·'] after:ml-2">{eventDate}</li>
+            <li class="text-base text-zinc-600 after:content-['·'] after:ml-2">{eventType}</li>
+            <li class="text-base text-zinc-600">{event.venue}</li>
+        </ul>
+    </div>
+
+    <div class="flex gap-1 px-5 py-2 -mx-2">
+        <a
+            href={event.event_url}
+            class="text-base text-primary px-2 py-1 rounded outline-offset-2 hover:bg-slate-200 focus:bg-slate-200"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            Visit event website
+        </a>
+    </div>
+</li>

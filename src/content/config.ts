@@ -34,8 +34,21 @@ const projects = defineCollection({
     }),
 });
 
+const events = defineCollection({
+    loader: file('data/events.json'),
+    schema: z.object({
+        title: z.string(),
+        event_title: z.string(),
+        event_url: z.string(),
+        type: z.string(),
+        date: z.string(),
+        venue: z.string(),
+    }),
+});
+
 export const collections = {
     experiences,
     socials,
     projects,
+    events,
 };
