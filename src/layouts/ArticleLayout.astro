@@ -1,0 +1,37 @@
+---
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import '../styles/global.css';
+
+const { frontmatter } = Astro.props;
+const articleDate = new Date(frontmatter.date).toLocaleDateString('en-US', { dateStyle: 'long' });
+---
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+        <title>{frontmatter.title} | Arnelle Balane</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="description" content="Arnelle is a software engineer based in Seattle." />
+        <meta name="generator" content={Astro.generator} />
+    </head>
+
+    <body class="text-xl text-copy tracking-tight antialiased bg-slate-100">
+        <Header />
+
+        <article class="flex flex-col gap-10 box-content max-w-3xl mx-auto px-5 pt-10 sm:pt-12 pb-36 sm:pb-62">
+            <header>
+                <h1 class="mb-5 text-3xl font-semibold leading-none">{frontmatter.title}</h1>
+                <time datetime={frontmatter.date} class="text-lg">{articleDate}</time>
+            </header>
+            <slot />
+        </article>
+
+        <Footer />
+    </body>
+</html>
