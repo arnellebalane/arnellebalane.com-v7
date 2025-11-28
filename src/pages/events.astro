@@ -1,0 +1,41 @@
+---
+import { getCollection } from 'astro:content';
+import type { InferEntrySchema } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import EventsSection from '../components/sections/EventsSection.astro';
+
+const upcomingEvents: InferEntrySchema<'events'>[] = [];
+const pastEvents: InferEntrySchema<'events'>[] = [];
+const today = new Date();
+
+const events = await getCollection('events');
+for (const event of events) {
+    const date = new Date(event.data.date);
+    if (date >= today) {
+        upcomingEvents.push(event.data);
+    } else {
+        pastEvents.push(event.data);
+    }
+}
+---
+
+<BaseLayout title="Events">
+    <div class="flex flex-col gap-10 sm:gap-20 pt-10 sm:pt-12 pb-36 sm:pb-62">
+        <h1 class="text-3xl sm:text-5xl font-semibold leading-none text-center">Events</h1>
+
+        {
+            upcomingEvents.length > 0 ? (
+                <EventsSection events={upcomingEvents} featured />
+            ) : (
+                <section>
+                    <p class="max-w-3xl mx-auto text-xl md:text-center">
+                        <strong>No upcoming events, for now.</strong> I give talks and workshops about JavaScript and
+                        Web topics &mdash; Performance, Progressive Web Apps, Project Fugu, Firebase, and others. I am
+                        always excited for opportunities to share about these topics!
+                    </p>
+                </section>
+            )
+        }
+        {pastEvents.length > 0 && <EventsSection title="Past Events" events={pastEvents} />}
+    </div>
+</BaseLayout>
