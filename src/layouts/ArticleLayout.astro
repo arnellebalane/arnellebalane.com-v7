@@ -11,6 +11,7 @@ const articleDate = new Date(frontmatter.date).toLocaleDateString('en-US', {
 });
 const articleUrl = import.meta.env.SITE + url;
 const articleImage = import.meta.env.SITE + frontmatter.cover_image;
+const appDomain = new URL(import.meta.env.SITE).hostname;
 ---
 
 <html lang="en">
@@ -54,5 +55,13 @@ const articleImage = import.meta.env.SITE + frontmatter.cover_image;
         </article>
 
         <Footer />
+
+        <script
+            is:inline
+            defer
+            src="https://umami.arnelle.dev/script.js"
+            data-website-id="de64ab62-0f3c-4f6b-847b-2b00e2acb4bf"
+            data-domains={appDomain}
+            data-do-not-track="true"></script>
     </body>
 </html>

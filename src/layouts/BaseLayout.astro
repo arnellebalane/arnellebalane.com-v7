@@ -14,6 +14,7 @@ const formattedTitle = `${prefix}Arnelle Balane`;
 const isHomeRoute = Astro.url.pathname === '/';
 const pageUrl = `${import.meta.env.SITE}${Astro.url.pathname}`;
 const pageImageUrl = `${import.meta.env.SITE}/social-share.jpg`;
+const appDomain = new URL(import.meta.env.SITE).hostname;
 ---
 
 <html lang="en">
@@ -42,5 +43,13 @@ const pageImageUrl = `${import.meta.env.SITE}/social-share.jpg`;
         </div>
 
         {!isHomeRoute && <Footer />}
+
+        <script
+            is:inline
+            defer
+            src="https://umami.arnelle.dev/script.js"
+            data-website-id="de64ab62-0f3c-4f6b-847b-2b00e2acb4bf"
+            data-domains={appDomain}
+            data-do-not-track="true"></script>
     </body>
 </html>
