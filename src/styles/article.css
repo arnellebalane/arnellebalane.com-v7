@@ -89,6 +89,10 @@ html {
         margin-block: theme('spacing.8');
     }
 
+    .image-centered img {
+        margin-inline: auto;
+    }
+
     .video-embed {
         width: calc(100% + (2 * theme('spacing.5')));
         margin-inline: calc(-1 * theme('spacing.5'));
