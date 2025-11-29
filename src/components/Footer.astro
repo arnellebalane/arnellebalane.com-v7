@@ -38,8 +38,15 @@ const currentYear = new Date().getFullYear();
     <div class="border-t border-copy">
         <div class="max-w-5xl mx-auto p-5">
             <p class="text-sm text-red-100 uppercase tracking-normal">
-                &copy; {currentYear}, Arnelle Balane
+                &copy; <span id="copyright-year">{currentYear}</span>, Arnelle Balane
             </p>
         </div>
     </div>
 </footer>
+
+<script>
+    const footerYear = document.querySelector('#copyright-year');
+    if (footerYear) {
+        footerYear.textContent = String(new Date().getFullYear());
+    }
+</script>
