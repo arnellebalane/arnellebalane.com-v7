@@ -4,11 +4,13 @@ import Header from '../components/Header.astro';
 import CalendarIcon from '../components/icons/CalendarIcon.astro';
 import '../styles/article.css';
 
-const { frontmatter } = Astro.props;
+const { frontmatter, url } = Astro.props;
 const articleDate = new Date(frontmatter.date).toLocaleDateString('en-US', {
     dateStyle: 'long',
     timeZone: 'Asia/Manila',
 });
+const articleUrl = import.meta.env.SITE + url;
+const articleImage = import.meta.env.SITE + frontmatter.cover_image;
 ---
 
 <html lang="en">
@@ -24,7 +26,11 @@ const articleDate = new Date(frontmatter.date).toLocaleDateString('en-US', {
             href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Ubuntu+Mono:wght@400;700&display=swap"
         />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-        <meta name="description" content="Arnelle is a software engineer based in Seattle." />
+        <meta name="description" content={frontmatter.summary} />
+        <meta property="og:title" content={frontmatter.title} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={articleUrl} />
+        <meta property="og:image" content={articleImage} />
         <meta name="generator" content={Astro.generator} />
     </head>
 
