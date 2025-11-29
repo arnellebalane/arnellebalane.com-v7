@@ -10,7 +10,7 @@ const articleDate = new Date(frontmatter.date).toLocaleDateString('en-US', {
     timeZone: 'Asia/Manila',
 });
 const articleUrl = import.meta.env.SITE + url;
-const articleImage = import.meta.env.SITE + frontmatter.cover_image;
+const articleImage = import.meta.env.SITE + (frontmatter.cover_image || '/social-share.jpg');
 const appDomain = new URL(import.meta.env.SITE).hostname;
 ---
 
