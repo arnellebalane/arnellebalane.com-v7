@@ -44,6 +44,10 @@ html {
         font-weight: 600;
     }
 
+    small {
+        font-size: theme('text.sm');
+    }
+
     :not(pre) > code {
         padding: theme('spacing.1') theme('spacing.2');
         border-radius: theme('spacing.1');
