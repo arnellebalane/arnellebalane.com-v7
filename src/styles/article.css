@@ -45,7 +45,7 @@ html {
     }
 
     small {
-        font-size: theme('text.sm');
+        font-size: theme('text.base');
     }
 
     :not(pre) > code {

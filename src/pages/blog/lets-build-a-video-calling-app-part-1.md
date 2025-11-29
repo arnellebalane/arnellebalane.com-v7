@@ -121,7 +121,7 @@ called an "**ICE candidate**".
 ![WebRTC finding ICE candidates](https://web.dev/static/articles/webrtc-basics/image/finding-connection-candid-299386125b4b7_1920.png)
 
 <small style="display: block; text-align: center">
-    <i>Image from <a href="https://web.dev/webrtc-basics">https://web.dev/webrtc-basics</a>: Get started with WebRTC</i>
+    Image from <a href="https://web.dev/webrtc-basics">https://web.dev/webrtc-basics</a>: Get started with WebRTC
 </small>
 
 Now that's a lot of terms and acronyms and servers to remember right now, but
