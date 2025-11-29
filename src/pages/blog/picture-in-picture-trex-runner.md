@@ -2,7 +2,7 @@
 layout: ../../layouts/ArticleLayout.astro
 title: 'Playing the T-Rex Runner game inside a Picture-in-Picture window'
 summary: "This article describes an experiment that I did with running Chrome's T-Rex Runner game inside a PiP window."
-cover_image: /images/blog/playing-the-t-rex-runner-game-inside-a-picture-in-picture-window.webp
+cover_image: /images/blog/picture-in-picture-trex-runner.webp
 date: 2019-07-22
 ---
 
@@ -60,7 +60,7 @@ to only contain this necessary markup inside the `<body>`:
 This gives us an exact replica of the offline T-Rex runner game which we can
 already play with:
 
-![Offline T-Rex Runner replica](../../images/blog/playing-the-t-rex-runner-game-inside-a-picture-in-picture-window/trex-runner-replica.png)
+![Offline T-Rex Runner replica](../../images/blog/picture-in-picture-trex-runner/trex-runner-replica.png)
 
 ## Implement programmatic T-Rex jump
 
@@ -193,7 +193,7 @@ The Picture-in-Picture API integrates well with the Media Session API. When we
 define the playback event handlers, the Picture-in-Picture window will also
 display their corresponding action buttons.
 
-![T-Rex runner game in Picture-in-Picture window](../../images/blog/playing-the-t-rex-runner-game-inside-a-picture-in-picture-window/trex-runner-pip-window.png)
+![T-Rex runner game in Picture-in-Picture window](../../images/blog/picture-in-picture-trex-runner/trex-runner-pip-window.png)
 
 ## Let's play!
 

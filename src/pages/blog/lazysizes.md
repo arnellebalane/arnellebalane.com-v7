@@ -2,7 +2,7 @@
 layout: ../../layouts/ArticleLayout.astro
 title: 'Using lazysizes to lazyload images on the Web'
 summary: 'Lazysizes is a JavaScript library for lazy-loading images on the Web. This article demonstrates how to use it.'
-cover_image: /images/blog/using-lazysizes-to-lazyload-images-on-the-web.webp
+cover_image: /images/blog/lazysizes.webp
 date: 2019-01-13
 ---
 
@@ -12,7 +12,7 @@ times especially when they have large file sizes or when there are a lot of
 them on the page, not to mention that they can unnecessarily consume our users'
 bandwidths. One way to deal with these concerns is to **lazyload** our images.
 
-![Lazyloading preview](../../images/blog/using-lazysizes-to-lazyload-images-on-the-web/lazyloading-preview.jpg)
+![Lazyloading preview](../../images/blog/lazysizes/lazyloading-preview.jpg)
 
 Lazyloading means that we load our images only when they are going to be visible
 in the page. For example, an image located somewhere near the end of a long
@@ -39,7 +39,7 @@ on with lazysizes. Our example page is going to have the following markup:
 <!-- 3 more lorem ipsum paragraphs -->
 ```
 
-![Example web page](../../images/blog/using-lazysizes-to-lazyload-images-on-the-web/example-webpage.gif)
+![Example web page](../../images/blog/lazysizes/example-webpage.gif)
 
 <small style="display: block; text-align: center">Example Web page with an image</small>
 
@@ -74,7 +74,7 @@ Second, we modify the `img` tags that we want to lazyload to:
 
 And the result?
 
-![Basic lazysizes usage](../../images/blog/using-lazysizes-to-lazyload-images-on-the-web/lazysizes-basic.gif)
+![Basic lazysizes usage](../../images/blog/lazysizes/lazysizes-basic.gif)
 
 <small style="display: block; text-align: center">Basic lazysizes usage result</small>
 
@@ -135,7 +135,7 @@ image as the `src` attribute of the `img` tag.
 Adding the `width` and `height` attributes makes the small-sized image take up
 the space of the actual image. This can also be done via CSS.
 
-![Lazysizes with low-quality image placeholder](../../images/blog/using-lazysizes-to-lazyload-images-on-the-web/lazysizes-with-placeholder.gif)
+![Lazysizes with low-quality image placeholder](../../images/blog/lazysizes/lazysizes-with-placeholder.gif)
 
 <small style="display: block; text-align: center">Lazysizes, using a low-quality image placeholder</small>
 

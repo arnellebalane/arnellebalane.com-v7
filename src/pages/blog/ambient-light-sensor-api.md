@@ -2,7 +2,7 @@
 layout: ../../layouts/ArticleLayout.astro
 title: 'Using the Ambient Light Sensor API to add brightness-sensitive dark mode to my website'
 summary: 'This article describes how I added dark mode to my website, which automatically toggles based on the brightness of the surroundings.'
-cover_image: /images/blog/using-the-ambient-light-sensor-api-to-add-brightness-sensitive-dark-mode-to-my-website.webp
+cover_image: /images/blog/ambient-light-sensor-api.webp
 date: 2019-01-13
 ---
 
@@ -10,7 +10,7 @@ I just added a new enhancement to my website: **dark mode**! Because, you know,
 you might be viewing it at night and I don't want you to get blinded by the
 brightness of the screen ;)
 
-![Dark mode / light mode preview](../../images/blog/using-the-ambient-light-sensor-api-to-add-brightness-sensitive-dark-mode-to-my-website/dark-light-mode-preview.png)
+![Dark mode / light mode preview](../../images/blog/ambient-light-sensor-api/dark-light-mode-preview.png)
 
 This article will quickly walk through how I implemented dark mode, and how I
 made it even cooler by automatically toggling on/off depending on the
@@ -118,7 +118,7 @@ shows different example illuminance values under different conditions:
 
 <div class="image-centered">
 
-![Luminance values](../../images/blog/using-the-ambient-light-sensor-api-to-add-brightness-sensitive-dark-mode-to-my-website/luminance-values.jpg)
+![Luminance values](../../images/blog/ambient-light-sensor-api/luminance-values.jpg)
 
 </div>
 
@@ -150,7 +150,7 @@ is dark, and disable when it gets bright!
 
 <div class="image-centered">
 
-![Final results](../../images/blog/using-the-ambient-light-sensor-api-to-add-brightness-sensitive-dark-mode-to-my-website/final-results.gif)
+![Final results](../../images/blog/ambient-light-sensor-api/final-results.gif)
 
 </div>
 

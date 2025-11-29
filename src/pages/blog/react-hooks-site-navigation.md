@@ -2,7 +2,7 @@
 layout: ../../layouts/ArticleLayout.astro
 title: 'Building a site navigation menu using React Hooks'
 summary: 'This article describes how I used React Hooks to make a stateful navigation menu.'
-cover_image: /images/blog/building-a-site-navigation-menu-using-react-hooks.webp
+cover_image: /images/blog/react-hooks-site-navigation.webp
 date: 2019-01-20
 ---
 
@@ -11,7 +11,7 @@ decided to rebuild my personal website with it. It's still a work in progress
 but there is one component which I found interesting to build: the site's
 navigation menu.
 
-![Navigation menu preview](../../images/blog/building-a-site-navigation-menu-using-react-hooks/navigation-menu-preview.gif)
+![Navigation menu preview](../../images/blog/react-hooks-site-navigation/navigation-menu-preview.gif)
 
 It's just a simple menu, and I only have two requirements for it:
 
