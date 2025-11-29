@@ -12,6 +12,8 @@ const prefix = title ? `${title} | ` : '';
 const formattedTitle = `${prefix}Arnelle Balane`;
 
 const isHomeRoute = Astro.url.pathname === '/';
+const pageUrl = `${import.meta.env.SITE}${Astro.url.pathname}`;
+const pageImageUrl = `${import.meta.env.SITE}/images/social-share.jpg`;
 ---
 
 <html lang="en">
@@ -25,6 +27,10 @@ const isHomeRoute = Astro.url.pathname === '/';
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <meta name="description" content="Arnelle is a software engineer based in Seattle." />
+        <meta property="og:title" content={formattedTitle} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={pageUrl} />
+        <meta property="og:image" content={pageImageUrl} />
         <meta name="generator" content={Astro.generator} />
     </head>
 
