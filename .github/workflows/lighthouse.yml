@@ -17,12 +17,12 @@ jobs:
               if: github.event_name == 'pull_request'
               with:
                   urls: |
-                      https://deploy-preview-$PR_NUMBER--arnellebalane-v7.netlify.app
-                      https://deploy-preview-$PR_NUMBER--arnellebalane-v7.netlify.app/about
-                      https://deploy-preview-$PR_NUMBER--arnellebalane-v7.netlify.app/blog
-                      https://deploy-preview-$PR_NUMBER--arnellebalane-v7.netlify.app/projects
-                      https://deploy-preview-$PR_NUMBER--arnellebalane-v7.netlify.app/events
-                      https://deploy-preview-$PR_NUMBER--arnellebalane-v7.netlify.app/blog/async-clipboard-api
+                      https://deploy-preview-$PR_NUMBER--arnellebalane-v7.netlify.app/
+                      https://deploy-preview-$PR_NUMBER--arnellebalane-v7.netlify.app/about/
+                      https://deploy-preview-$PR_NUMBER--arnellebalane-v7.netlify.app/blog/
+                      https://deploy-preview-$PR_NUMBER--arnellebalane-v7.netlify.app/projects/
+                      https://deploy-preview-$PR_NUMBER--arnellebalane-v7.netlify.app/events/
+                      https://deploy-preview-$PR_NUMBER--arnellebalane-v7.netlify.app/blog/async-clipboard-api/
                   serverBaseUrl: ${{ secrets.LHCI_SERVER_BASE_URL }}
                   serverToken: ${{ secrets.LHCI_SERVER_TOKEN }}
               env:
@@ -32,12 +32,12 @@ jobs:
               if: github.event_name == 'push'
               with:
                   urls: |
-                      https://beta.arnellebalane.com
-                      https://beta.arnellebalane.com/about
-                      https://beta.arnellebalane.com/blog
-                      https://beta.arnellebalane.com/projects
-                      https://beta.arnellebalane.com/events
-                      https://beta.arnellebalane.com/blog/async-clipboard-api
+                      https://beta.arnellebalane.com/
+                      https://beta.arnellebalane.com/about/
+                      https://beta.arnellebalane.com/blog/
+                      https://beta.arnellebalane.com/projects/
+                      https://beta.arnellebalane.com/events/
+                      https://beta.arnellebalane.com/blog/async-clipboard-api/
                   budgetPath: ./budget.json
                   serverBaseUrl: ${{ secrets.LHCI_SERVER_BASE_URL }}
                   serverToken: ${{ secrets.LHCI_SERVER_TOKEN }}
