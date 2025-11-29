@@ -2,7 +2,7 @@
 layout: ../../layouts/ArticleLayout.astro
 title: 'Playing the T-Rex Runner game inside a Picture-in-Picture window'
 summary: "This article describes an experiment that I did with running Chrome's T-Rex Runner game inside a PiP window."
-cover_image: /images/blog/playing-the-t-rex-runner-game-inside-a-picture-in-picture-window.jpg
+cover_image: /images/blog/playing-the-t-rex-runner-game-inside-a-picture-in-picture-window.webp
 date: 2019-07-22
 ---
 

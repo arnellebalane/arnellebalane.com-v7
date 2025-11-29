@@ -2,7 +2,7 @@
 layout: ../../layouts/ArticleLayout.astro
 title: 'Setting up multiple GitHub accounts, the nicer way'
 summary: 'This is an updated setup for multiple GitHub accounts on the same machine.'
-cover_image: /images/blog/setting-up-multiple-github-accounts-the-nicer-way.jpg
+cover_image: /images/blog/setting-up-multiple-github-accounts-the-nicer-way.webp
 date: 2019-03-07
 ---
 

@@ -2,7 +2,7 @@
 layout: ../../layouts/ArticleLayout.astro
 title: 'Building a site navigation menu using React Hooks'
 summary: 'This article describes how I used React Hooks to make a stateful navigation menu.'
-cover_image: /images/blog/building-a-site-navigation-menu-using-react-hooks.jpg
+cover_image: /images/blog/building-a-site-navigation-menu-using-react-hooks.webp
 date: 2019-01-20
 ---
 

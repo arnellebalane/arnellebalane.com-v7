@@ -2,7 +2,7 @@
 layout: ../../layouts/ArticleLayout.astro
 title: 'Negative indexes in JavaScript arrays using Proxies'
 summary: 'This article shows how we can utilize Proxies in order to use negative indexes in JavaScript arrays.'
-cover_image: /images/blog/javascript-array-negative-index-using-proxies.jpg
+cover_image: /images/blog/javascript-array-negative-index-using-proxies.webp
 date: 2019-02-08
 ---
 
