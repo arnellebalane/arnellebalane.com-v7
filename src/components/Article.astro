@@ -15,7 +15,10 @@ const articleDate = article.data.date.toLocaleDateString('en-US', {
 <li class="rounded bg-slate-50 md:bg-transparent">
     <a
         href={`/blog/${article.id}`}
-        class:list={['flex flex-col outline-offset-2', { 'md:flex-row md:gap-6': featured, 'md:gap-5': !featured }]}
+        class:list={[
+            'group flex flex-col outline-offset-2',
+            { 'md:flex-row md:gap-6': featured, 'md:gap-5': !featured },
+        ]}
     >
         <div class:list={['grow basis-0', { 'items-center': featured, 'hidden md:block': !featured }]}>
             {
@@ -32,7 +35,12 @@ const articleDate = article.data.date.toLocaleDateString('en-US', {
         </div>
 
         <div class:list={['grow basis-0 flex flex-col gap-3 p-5 md:p-0', { 'md:gap-5 md:py-8': featured }]}>
-            <h2 class:list={['text-xl font-semibold', { 'md:text-3xl': featured }]}>
+            <h2
+                class:list={[
+                    'text-xl font-semibold group-hover:text-primary group-focus:text-primary',
+                    { 'md:text-3xl': featured },
+                ]}
+            >
                 {article.data.title}
             </h2>
             <p class:list={['text-zinc-600', { 'md:text-xl': featured }]}>{article.data.summary}</p>
