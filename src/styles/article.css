@@ -26,7 +26,7 @@ html {
         font-weight: 600;
 
         &:not(:first-child) {
-            margin-block-start: theme('spacing.8');
+            margin-block-start: theme('spacing.5');
         }
     }
 
@@ -69,7 +69,7 @@ html {
 
     ul,
     ol {
-        list-style: initial;
+        list-style: revert;
         padding-inline-start: theme('spacing.10');
     }
 
