@@ -1,5 +1,5 @@
 import { defineCollection, z } from 'astro:content';
-import { file } from 'astro/loaders';
+import { file, glob } from 'astro/loaders';
 
 const experiences = defineCollection({
     loader: file('data/experiences.json'),
@@ -46,9 +46,24 @@ const events = defineCollection({
     }),
 });
 
+const articles = defineCollection({
+    loader: glob({
+        base: './src/pages/blog',
+        pattern: '**/*.md',
+    }),
+    schema: z.object({
+        title: z.string(),
+        summary: z.string(),
+        cover_image: z.string().optional(),
+        date: z.date(),
+        featured: z.boolean().optional(),
+    }),
+});
+
 export const collections = {
     experiences,
     socials,
     projects,
     events,
+    articles,
 };

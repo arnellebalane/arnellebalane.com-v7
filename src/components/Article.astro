@@ -1,0 +1,42 @@
+---
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+    article: CollectionEntry<'articles'>;
+    featured?: boolean;
+}
+const { article, featured } = Astro.props;
+const articleDate = article.data.date.toLocaleDateString('en-US', {
+    dateStyle: 'long',
+    timeZone: 'Asia/Manila',
+});
+---
+
+<li class="rounded bg-slate-50 md:bg-transparent">
+    <a
+        href={`/blog/${article.id}`}
+        class:list={['flex flex-col md:gap-5 outline-offset-2', { 'md:flex-row': featured }]}
+    >
+        <div class:list={['grow basis-0', { 'hidden md:block': !featured }]}>
+            {
+                article.data.cover_image ? (
+                    <img
+                        src={article.data.cover_image}
+                        alt={article.data.title}
+                        class="aspect-[16/10] object-cover object-center rounded"
+                    />
+                ) : (
+                    <div class="aspect-[16/10] object-cover object-center rounded bg-slate-200" />
+                )
+            }
+        </div>
+
+        <div class:list={['grow basis-0 flex flex-col gap-3 p-5 md:p-0', { 'md:gap-5 md:py-6': featured }]}>
+            <h2 class:list={['text-xl font-semibold', { 'md:text-3xl': featured }]}>
+                {article.data.title}
+            </h2>
+            <p class:list={['text-zinc-600', { 'md:text-xl': featured }]}>{article.data.summary}</p>
+            <time class="text-base text-zinc-600">{articleDate}</time>
+        </div>
+    </a>
+</li>
