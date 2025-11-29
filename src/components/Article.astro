@@ -1,0 +1,38 @@
+---
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+    article: CollectionEntry<'articles'>;
+}
+const { article } = Astro.props;
+const articleDate = article.data.date.toLocaleDateString('en-US', {
+    dateStyle: 'long',
+    timeZone: 'Asia/Manila',
+});
+---
+
+<li class="rounded bg-slate-50 md:bg-transparent">
+    <a href={`/blog/${article.id}`} class="flex flex-col gap-5 outline-offset-2">
+        <div class="hidden md:block">
+            {
+                article.data.cover_image ? (
+                    <img
+                        src={article.data.cover_image}
+                        alt={article.data.title}
+                        class="aspect-[16/10] object-cover object-center rounded"
+                    />
+                ) : (
+                    <div class="aspect-[16/10] object-cover object-center rounded bg-slate-200" />
+                )
+            }
+        </div>
+
+        <div class="flex flex-col gap-3 p-5 md:p-0">
+            <h2 class="text-xl font-semibold">
+                {article.data.title}
+            </h2>
+            <p class="text-zinc-600">{article.data.summary}</p>
+            <time class="text-base text-zinc-600">{articleDate}</time>
+        </div>
+    </a>
+</li>
