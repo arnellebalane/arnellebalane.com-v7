@@ -15,9 +15,9 @@ const articleDate = article.data.date.toLocaleDateString('en-US', {
 <li class="rounded bg-slate-50 md:bg-transparent">
     <a
         href={`/blog/${article.id}`}
-        class:list={['flex flex-col md:gap-5 outline-offset-2', { 'md:flex-row': featured }]}
+        class:list={['flex flex-col outline-offset-2', { 'md:flex-row md:gap-6': featured, 'md:gap-5': !featured }]}
     >
-        <div class:list={['grow basis-0', { 'hidden md:block': !featured }]}>
+        <div class:list={['grow basis-0', { 'items-center': featured, 'hidden md:block': !featured }]}>
             {
                 article.data.cover_image ? (
                     <img
@@ -31,7 +31,7 @@ const articleDate = article.data.date.toLocaleDateString('en-US', {
             }
         </div>
 
-        <div class:list={['grow basis-0 flex flex-col gap-3 p-5 md:p-0', { 'md:gap-5 md:py-6': featured }]}>
+        <div class:list={['grow basis-0 flex flex-col gap-3 p-5 md:p-0', { 'md:gap-5 md:py-8': featured }]}>
             <h2 class:list={['text-xl font-semibold', { 'md:text-3xl': featured }]}>
                 {article.data.title}
             </h2>
