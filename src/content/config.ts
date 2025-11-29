@@ -56,6 +56,7 @@ const articles = defineCollection({
         summary: z.string(),
         cover_image: z.string().optional(),
         date: z.date(),
+        featured: z.boolean().optional(),
     }),
 });
 
