@@ -8,6 +8,7 @@ interface Props {
 const { event, featured } = Astro.props;
 const eventDate = new Date(event.date).toLocaleDateString('en-US', {
     dateStyle: 'long',
+    timeZone: 'Asia/Manila',
 });
 const eventType = event.type.charAt(0).toUpperCase() + event.type.substring(1);
 ---

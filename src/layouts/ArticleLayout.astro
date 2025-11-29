@@ -5,7 +5,10 @@ import CalendarIcon from '../components/icons/CalendarIcon.astro';
 import '../styles/article.css';
 
 const { frontmatter } = Astro.props;
-const articleDate = new Date(frontmatter.date).toLocaleDateString('en-US', { dateStyle: 'long' });
+const articleDate = new Date(frontmatter.date).toLocaleDateString('en-US', {
+    dateStyle: 'long',
+    timeZone: 'Asia/Manila',
+});
 ---
 
 <html lang="en">
