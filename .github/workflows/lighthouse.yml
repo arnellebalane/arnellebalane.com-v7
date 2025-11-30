@@ -38,6 +38,5 @@ jobs:
                       https://beta.arnellebalane.com/projects/
                       https://beta.arnellebalane.com/events/
                       https://beta.arnellebalane.com/blog/async-clipboard-api/
-                  budgetPath: ./budget.json
                   serverBaseUrl: ${{ secrets.LHCI_SERVER_BASE_URL }}
                   serverToken: ${{ secrets.LHCI_SERVER_TOKEN }}
