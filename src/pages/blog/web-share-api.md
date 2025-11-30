@@ -6,8 +6,8 @@ date: 2017-04-04
 ---
 
 The Web Share API is this new Web API that allows us to share content from our
-Web applications using the host platform’s native sharing capabilities. This is
-what it looks like in action on one application that I’m building:
+Web applications using the host platform's native sharing capabilities. This is
+what it looks like in action on one application that I'm building:
 
 <div class="video-embed" style="aspect-ratio: 9 / 16;" >
     <iframe
@@ -26,7 +26,7 @@ what it looks like in action on one application that I’m building:
     Web Share API in action
 </small>
 
-This feature is really great because we developers don’t have to write a lot of
+This feature is really great because we developers don't have to write a lot of
 additional code anymore to handle sharing especially on different social
 networks. It also uses a native interface which the user is already familiar
 with.
@@ -53,8 +53,8 @@ if ('share' in navigator) {
 ## Feature Support
 
 As of now, the Web Share API is only available in Google Chrome as an
-experimental feature, and is hidden behind the “Experimental Web Platform
-features” flag. Enabling this flag will allow you to use the Web Share API
+experimental feature, and is hidden behind the "Experimental Web Platform
+features" flag. Enabling this flag will allow you to use the Web Share API
 (among other features) in your browser, but it would be impractical to ask
 every user of your Web applications to enable this flag. Fortunately, as of
 Chrome 55, the Web Share API is now available as an Origin Trial. In an Origin
@@ -77,9 +77,9 @@ on an element, but calling it when the page loads is not allowed.
 
 **Edit: April 5, 2017 10:15PM:** It turns out (just based on observation, no
 actual reference yet) that using the Origin Trial does not enable the Web Share
-API on desktop browsers. Enabling the “Experimental Web Platform features” flag
+API on desktop browsers. Enabling the "Experimental Web Platform features" flag
 does, but then the `navigator.share()` function call will just redirect to a
-test page for the Web Share Target API (another cool Web API that we’ll see more
+test page for the Web Share Target API (another cool Web API that we'll see more
 about in the future):
 
 <div class="image-centered">

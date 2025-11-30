@@ -168,7 +168,7 @@ localStorage.setItem('key', 'value');
 
 Keys and values are always stored as strings, so we have to serialize complex
 objects before storing them. This will fire a `storage` event in the other
-tabs’ `window` objects, which they can add an event handler for:
+tabs' `window` objects, which they can add an event handler for:
 
 ```js
 window.onstorage = function (e) {
@@ -180,7 +180,7 @@ There are other complexities involved with using localStorage for this purpose.
 One is that adding the exact same key-value pair values will not fire the
 `storage` event. This can be taken care of by always deleting the stored
 key-value pair right away. Another is that writing key-value pairs is prone to
-race conditions. We’d also have to add our own mechanism to handle that
+race conditions. We'd also have to add our own mechanism to handle that
 properly.
 
 This approach is definitely not the most elegant, but it gets the job done.
@@ -192,7 +192,7 @@ aims to provide a consistent API for a client-side messaging channel. Under the
 hood, it only abstracts the different solutions described in the previous
 sections of this article.
 
-After we’ve loaded the library, we can use it to easily send data to other tabs:
+After we've loaded the library, we can use it to easily send data to other tabs:
 
 ```js
 hermes.send('key', 'value');

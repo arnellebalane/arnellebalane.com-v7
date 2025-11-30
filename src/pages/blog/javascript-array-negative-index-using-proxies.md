@@ -47,7 +47,7 @@ starting from the end using negative indexes.
 
 A **Proxy** is an object that essentially wraps any other object (called the
 **target**). Any interactions performed on the proxy are by default forwarded
-to the target, as if we’re still interacting directly with the target.
+to the target, as if we're still interacting directly with the target.
 
 The power of proxies, however, lies in the ability to define traps. Traps are
 methods that capture operations on the proxy object (such as setting/getting
@@ -84,7 +84,7 @@ const proxy = new Proxy(letters, {
 ```
 
 The [`get` trap](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/get)
-method is passed the target object and the property that we’re trying to access.
+method is passed the target object and the property that we're trying to access.
 Whatever value we return from this method becomes the value returned to whoever
 tried to access it.
 
@@ -107,7 +107,7 @@ const proxy = new Proxy(letters, {
 });
 ```
 
-Here we’re checking if the property we’re trying to access is a number (btw,
+Here we're checking if the property we're trying to access is a number (btw,
 numeric property names such as array indexes get converted to strings when
 passed to the `get` trap) and if it is negative. If yes, we convert it to a
 valid array index value, and return the array item at that computed index.
@@ -131,10 +131,10 @@ proxy[-1]; // => 'e'
 proxy[-2]; // => 'd'
 ```
 
-## What’s next?
+## What's next?
 
-In this article we’ve barely scratched the surface of what JavaScript Proxies
-can do. We’ve looked at the `get` trap, which allows us to customize the
+In this article we've barely scratched the surface of what JavaScript Proxies
+can do. We've looked at the `get` trap, which allows us to customize the
 behavior of getting a property from the proxied object.
 
 Proxies support many more traps, such as setting or deleting a property,
@@ -143,5 +143,5 @@ Check out its [documentation at MDN](https://developer.mozilla.org/en-US/docs/We
 to learn more about them.
 
 Proxies is a really powerful feature that enables us to write code that would
-previously be impossible or very difficult to do. I’m looking forward to other
+previously be impossible or very difficult to do. I'm looking forward to other
 use cases for this feature.
