@@ -3,6 +3,7 @@ import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
 import CalendarIcon from '../components/icons/CalendarIcon.astro';
 import '../styles/article.css';
+import '../styles/prism-dracula.css';
 
 const { frontmatter, url } = Astro.props;
 const articleDate = new Date(frontmatter.date).toLocaleDateString('en-US', {
@@ -24,7 +25,7 @@ const appDomain = new URL(import.meta.env.SITE).hostname;
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
             rel="stylesheet"
-            href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Ubuntu+Mono:wght@400;700&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Outfit:wght@100..900&display=swap"
         />
         <link rel="icon" type="image/svg+xml" href="/favicon.png" />
         <meta name="description" content={frontmatter.summary} />
