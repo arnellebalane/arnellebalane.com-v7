@@ -1,5 +1,6 @@
 ---
 import MenuIcon from './icons/MenuIcon.astro';
+import CloseIcon from './icons/CloseIcon.astro';
 
 const links = [
     { text: 'About', href: '/about' },
@@ -8,25 +9,53 @@ const links = [
     { text: 'Events', href: '/events' },
 ];
 
-const getCurrentClass = (href: string) => (Astro.url.pathname.startsWith(href) ? 'text-primary' : undefined);
+const getCurrentClass = (href: string) =>
+    Astro.url.pathname.startsWith(href) ? 'text-primary bg-slate-200 sm:bg-transparent' : undefined;
 ---
 
-<nav class="hidden sm:flex items-center gap-2">
-    {
-        links.map(({ text, href }) => (
-            <a
-                href={href}
-                class:list={[
-                    'px-2 py-1 rounded-sm outline-offset-2 hover:bg-slate-200 focus:bg-slate-200',
-                    getCurrentClass(href),
-                ]}
-            >
-                {text}
-            </a>
-        ))
-    }
-</nav>
+<div id="navigation" class="group">
+    <div
+        class:list={[
+            'hidden group-[.is-open]:block',
+            'fixed inset-0 z-10 bg-slate-200 opacity-50',
+            'sm:hidden group-[.is-open]:sm:hidden',
+        ]}
+    >
+    </div>
 
-<button class="block sm:hidden p-1" aria-label="Toggle menu">
-    <MenuIcon />
-</button>
+    <nav
+        class:list={[
+            'hidden group-[.is-open]:flex',
+            'fixed inset-0 right-14 z-10 pt-24 px-4 bg-zinc-50 flex-col gap-2',
+            'sm:static sm:flex sm:flex-row sm:items-center sm:p-0 sm:bg-transparent',
+        ]}
+    >
+        {
+            links.map(({ text, href }) => (
+                <a
+                    href={href}
+                    class:list={[
+                        'px-4 py-1 rounded-sm outline-offset-2 hover:bg-slate-200 focus:bg-slate-200 sm:px-2',
+                        getCurrentClass(href),
+                    ]}
+                >
+                    {text}
+                </a>
+            ))
+        }
+    </nav>
+
+    <button id="menu-toggle" class="relative z-12 block sm:hidden p-1" aria-label="Toggle menu">
+        <MenuIcon class="size-6 group-[.is-open]:hidden" />
+        <CloseIcon class="size-6 group-[:not(.is-open)]:hidden" />
+    </button>
+</div>
+
+<script>
+    const $navigation = document.querySelector('#navigation');
+    const $toggle = document.querySelector('#menu-toggle');
+
+    $toggle?.addEventListener('click', () => {
+        $navigation?.classList.toggle('is-open');
+    });
+</script>

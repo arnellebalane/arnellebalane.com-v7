@@ -13,7 +13,7 @@ const { isHomeRoute } = Astro.props;
     <div class="mx-auto flex justify-between items-center gap-5 max-w-(--wrapper-width)">
         {
             !isHomeRoute && (
-                <a href="/" class="flex items-center gap-2 sm:gap-3 p-1 -ml-1 sm:ml-0 rounded-sm">
+                <a href="/" class="z-12 flex items-center gap-2 sm:gap-3 p-1 -ml-1 sm:ml-0 rounded-sm">
                     <Image
                         src={avatarImage}
                         alt=""
