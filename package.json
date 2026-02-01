@@ -8,6 +8,8 @@
     "preview": "astro preview",
     "astro": "astro",
     "format": "prettier --write src/**/* *.md *.json",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
     "prepare": "husky"
   },
   "dependencies": {
@@ -16,14 +18,25 @@
     "tailwindcss": "^4.1.14"
   },
   "devDependencies": {
+    "@eslint/js": "^9.39.2",
+    "@typescript-eslint/eslint-plugin": "^8.54.0",
+    "@typescript-eslint/parser": "^8.54.0",
+    "astro-eslint-parser": "^1.2.2",
+    "eslint": "^9.39.2",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-astro": "^1.5.0",
+    "eslint-plugin-prettier": "^5.5.5",
     "husky": "^9.1.7",
     "lint-staged": "^16.2.3",
     "prettier": "^3.6.2",
     "prettier-plugin-astro": "^0.14.1"
   },
   "lint-staged": {
-    "*": [
-      "prettier --write --ignore-unknown"
+    "*.{astro,ts,tsx,js,jsx}": [
+      "eslint --fix"
+    ],
+    "*.{md,json}": [
+      "prettier --write"
     ]
   }
 }
