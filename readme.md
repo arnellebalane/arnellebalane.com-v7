@@ -2,7 +2,7 @@
 
 Hi, I'm Arnelle, and this is the source code for my personal website.
 This website is built with [Astro](https://astro.build/) and available at
-[beta.arnellebalane.com](https://beta.arnellebalane.com).
+[arnellebalane.com](https://arnellebalane.com).
 
 ## 🧞 Commands
 

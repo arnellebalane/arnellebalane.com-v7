@@ -32,11 +32,11 @@ jobs:
               if: github.event_name == 'push'
               with:
                   urls: |
-                      https://beta.arnellebalane.com/
-                      https://beta.arnellebalane.com/about/
-                      https://beta.arnellebalane.com/blog/
-                      https://beta.arnellebalane.com/projects/
-                      https://beta.arnellebalane.com/events/
-                      https://beta.arnellebalane.com/blog/async-clipboard-api/
+                      https://arnellebalane.com/
+                      https://arnellebalane.com/about/
+                      https://arnellebalane.com/blog/
+                      https://arnellebalane.com/projects/
+                      https://arnellebalane.com/events/
+                      https://arnellebalane.com/blog/async-clipboard-api/
                   serverBaseUrl: ${{ secrets.LHCI_SERVER_BASE_URL }}
                   serverToken: ${{ secrets.LHCI_SERVER_TOKEN }}
